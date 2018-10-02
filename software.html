@@ -1,0 +1,163 @@
+---
+layout: base
+---
+
+<!-- navigation banner -->
+<td class='navigation-banner'>
+	<a href='index.html'><div class='navigation-outer'>
+	<div class='navigation-pic personOff'></div>
+	<div class='navigation-text'>About Me </div></div></a>
+			
+	<a href='cv.html'><div class='navigation-outer'>
+	<div class='navigation-pic cvOff'></div>
+	<div class='navigation-text'>CV </div></div></a>
+				
+	<a href='research.html'><div class='navigation-outer'>
+	<div class='navigation-pic researchOff'></div>
+	<div class='navigation-text'>Research </div></div></a>
+		
+	<a href='teaching.html'><div class='navigation-outer'>
+	<div class='navigation-pic teachingOff'></div>
+	<div class='navigation-text'>Teaching </div></div></a>
+		
+	<a href='software.html'><div class='navigation-outer navigation-outer-active'>
+	<div class='navigation-pic softwareOn'></div>
+	<div class='navigation-text'>Software </div></div></a>
+</td>
+			
+<!-- main content -->
+<td class='middle'>
+<!-- Reproducible Research -->
+<div class='text-heading'> Reproducible Research </div>
+	<div class='text-body'> 
+	<table>
+	<td style='width: 500px' align='justify'> This page is intended to give access to the software of my published articles. Please feel free to download and make use of it. 			If you find bugs in our code please let me know: <a href="mailto:m.j.ehrhardt@damtp.cam.ac.uk">m.j.ehrhardt@damtp.cam.ac.uk</a>. <br><br> 
+I not only hope that this page can be useful to you but it also may encourage you to make your research accessible and reproducible. I followed the guideline to <a href="http://reproducibleresearch.net">reproducible research</a> by <a href="http://pixeltje.be/">Patrick Vandewalle</a>.</td>
+	<td style='width: 50px'></td>
+	<td><a href="http://reproducibleresearch.net"><img src="images/software/Reproducible_Research_149x62.jpg" width="200px"></a></td>
+	</table>
+</div>
+
+<div class='text-body'> 
+	Quick links to all software:
+	<ul style='margin-left: 30pt'>
+		<li><a href="#MRIMRI">Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</a></li>
+		<li><a href="#PETMRI">Joint reconstruction of PET-MRI by exploiting structural similarity</a></li>	
+		<li><a href="#RGB">Vector-Valued Image Processing by Parallel Level Sets</a></li>
+		<li><a href="https://github.com/mehrhardt/blind_remote_sensing">Blind Image Fusion for Hyperspectral Imaging with the Directional Total Variation</a></li>
+		<li><a href="https://github.com/mehrhardt/spdhg">Stochastic PDHG with Arbitrary Sampling and Imaging Applications</a></li>
+	</ul>
+	For more software see my <a href="https://github.com/mehrhardt">github</a> page.
+</div>
+
+<!--- MRIMRI --->
+<div class='text-heading'> <a href="http://epubs.siam.org/doi/10.1137/15M1047325" id="MRIMRI"> Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation </a>[<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/MultiContrastMRI.zip">download software (7 MB)</a>]</div>
+
+<div class='text-body' align='justify'> 
+	<a href="http://www.damtp.cam.ac.uk/user/me404/"><b>M. J. Ehrhardt</b></a>,
+	<a href="https://www.sites.google.com/site/mbetcke/"><b>M. M. Betcke</b></a> 
+	<br><br>
+					
+	<b>Paper:</b> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/Ehrhardt_and_Betcke_2016.pdf">download PDF</a>] [<a href="http://epubs.siam.org/doi/10.1137/15M1047325">on SIAM.org</a>] [<a href="https://arxiv.org/abs/1511.06631">arxiv</a>]
+	<br><br>
+					
+	<table>
+	<tr><td width="520px" align='justify'> <b>Abstract:</b> Magnetic resonance imaging (MRI) is a versatile imaging technique that allows different contrasts depending on the acquisition parameters. Many clinical imaging studies acquire MRI data for more than one of these contrasts---such as for instance T1 and T2 weighted images---which makes the overall scanning procedure very time consuming. As all of these images show the same underlying anatomy one can try to omit unnecessary measurements by taking the similarity into account during reconstruction. We will discuss two modifications of total variation---based on i) location and ii) direction---that take structural a priori knowledge into account and reduce to total variation in the degenerate case when no structural knowledge is available. We solve the resulting convex minimization problem with the alternating direction method of multipliers that separates the forward operator from the prior. For both priors the corresponding proximal operator can be implemented as an extension of the fast gradient projection method on the dual problem for total variation. We tested the priors on six data sets that are based on phantoms and real MRI images. In all test cases exploiting the structural information from the other contrast yields better results than separate reconstruction with total variation in terms of standard metrics like peak signal-to-noise ratio and structural similarity index. Furthermore, we found that exploiting the two dimensional directional information results in images with well defined edges, superior to those reconstructed solely using a priori information about the edge location. </td>
+	<td width='40px'></td>
+	<td>
+	<img src='images/software/SIAM_MRIMRI/MRIMRI_T1T2.png' height="120px"/> <br> Different scan parameters lead to different contrasts in MRI.
+	<img src='images/software/SIAM_MRIMRI/MRIMRI_structure.png' height="100px"/> <br> Structure can be either based on the location or direction of edges.</td></tr>
+	</table> <br>
+					
+	<b>Example Result:</b>
+	<div align="center"><img src="images/software/SIAM_MRIMRI/MRIMRI_results.png" width="600px"></div> Reconstructions with different a priori knowledge. The reconstruction quality improves visually significantly from left to right. <br><br>
+    				
+	<b>Tested Configurations:</b> The software was tested on Ubuntu 12.04 LTS with Matlab 2015a and Mac OS X with Matlab 2015a. If you have tested different configurations successfully please let me know <a href="mailto:m.j.ehrhardt@damtp.cam.ac.uk">m.j.ehrhardt@damtp.cam.ac.uk</a>. Please also report me in the case of failure.<br><br>
+					
+	<b>Reference:</b> M. J. Ehrhardt and M. M. Betcke, <a href="http://epubs.siam.org/doi/10.1137/15M1047325">Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</a>, SIAM Journal on Imaging Sciences 9(3), pp. 1084–1106, 2016 [<a href="downloads/bib/ehrhardtbetcke2016.bib">BibTeX</a>] <br><br>
+							
+	<b>Acknowledgements:</b> The simulation results are based on <a href="http://brainweb.bic.mni.mcgill.ca/brainweb/">BrainWeb</a> data and patient data kindly provided by Ninon Burgos and Jonathan Schott from the University College London, UK.
+</div>	
+
+<!--- PETMRI --->
+<div class='text-heading'> <a href="http://dx.doi.org/10.1088/0266-5611/31/1/015001" id="PETMRI"> Joint Reconstruction of PET-MRI by Exploiting Structural Similarity </a> 				[<a href="http://iopscience.iop.org/0266-5611/31/1/015001/media/IP_31_1_015001_suppdata_1.zip">download software (59 MB)</a>]</div>
+
+<div class='text-body' align='justify'> 
+<a href="http://www.damtp.cam.ac.uk/user/me404/"><b>M. J. Ehrhardt</b></a>,
+<a href="https://iris.ucl.ac.uk/iris/browse/profile?upi=KTHIE60"><b>K. Thielemans</b></a>,
+<a href="http://www.doc.ic.ac.uk/~lpizarro/Home.html"><b>L. Pizarro</b></a>,
+<a href="http://www.ucl.ac.uk/medical-imaging/staff/david_atkinson"><b>D. Atkinson</b></a>,
+<a href="http://cmic.cs.ucl.ac.uk/staff/sebastien_ourselin/"><b>S. Ourselin</b></a>,
+<a href="https://iris.ucl.ac.uk/iris/browse/profile?upi=BHUTT63"><b>B. F. Hutton</b></a>,
+<a href="http://www0.cs.ucl.ac.uk/staff/s.arridge/"><b>S. R. Arridge</b></a> <br><br>
+		
+<b>Paper:</b> [<a href="http://dx.doi.org/10.1088/0266-5611/31/1/015001">from IOP science</a>] <br><br>
+<table>
+<tr><td width="520px" align='justify'> <b>Abstract:</b> Recent advances in technology have enabled the combination of positron emission tomography (PET) with magnetic resonance imaging (MRI). These PET-MRI scanners simultaneously acquire functional PET and anatomical or functional MRI data. As function and anatomy are not independent of one another the images to be reconstructed are likely to have shared structures. We aim to exploit this inherent structural similarity by reconstructing from both modalities in a joint reconstruction framework. The structural similarity between two modalities can be modelled in two different ways: edges are more likely to be at similar positions and/or to have similar orientations. We analyse the diffusion process generated by minimizing priors that encapsulate these different models. It turns out that the class of parallel level set priors always corresponds to anisotropic diffusion which is sometimes forward and sometimes backward diffsion. We perform numerical experiments where we jointly reconstruct from blurred Radon data with Poisson noise (PET) and under-sampled Fourier data with Gaussian noise (MRI). Our results show that both modalities benefit from each other in areas of shared edge information. The joint reconstructions have less artefacts and sharper edges compared to separate reconstructions and the l2-error
+can be reduced in all of the considered cases of under-sampling. </td>
+<td width='40px'></td>
+	
+<td><img src='images/software/IP_PETMRI/PET.png' height="120px"/> <img src='images/software/IP_PETMRI/MRI.png' height="120px"/><br> PET and MRI images show structural similarity due to the same anatomy.</td></tr>
+</table> <br>
+					
+<b>Example Result:</b>
+<div align="center">
+<table width="80%">
+<tr>
+<td align="center"> <img src="images/software/IP_PETMRI/MLEM.png" width="150px" </td>
+<td align="center"> <img src="images/software/IP_PETMRI/lines2_TV.png" width="150px" </td>
+<td width="100px"></td>
+<td align="center"> <img src="images/software/IP_PETMRI/lines2_LPLS_PET.png" width="150px"> </td>
+<td align="center"> <img src="images/software/IP_PETMRI/lines2_LPLS_MRI.png" width="150px"> </td>
+</tr>
+<tr height="10px"></tr>
+<tr>
+<td align="center"> <img src="images/software/IP_PETMRI/MLEM_error.png" width="150px" </td>
+<td align="center"> <img src="images/software/IP_PETMRI/lines2_TV_error.png" width="150px" </td>
+<td></td>
+<td align="center"> <img src="images/software/IP_PETMRI/lines2_LPLS_PET_error.png" width="150px"> </td>
+<td align="center"> <img src="images/software/IP_PETMRI/lines2_LPLS_MRI_error.png" width="150px"> </td>
+</tr>
+</table>
+</div>
+Reconstructions of simulated PET and undersampled MRI are shown. Separate reconstructions (left) show low resolution in PET and ghosting in MRI. Joint reconstruction (right) results in better defined PET images and removes ghosting artefacts in MRI.<br><br>
+    				
+<b>Tested Configurations:</b> The software was tested on Ubuntu 12.04 LTS with Matlab 2013a. If you have tested different configurations successfully please let me know <a href="mailto:m.j.ehrhardt@damtp.cam.ac.uk">m.j.ehrhardt@damtp.cam.ac.uk</a>. Please also report me in the case of failure.<br><br>
+					
+<b>Reference:</b> M. J. Ehrhardt, K. Thielemans, L. Pizarro, D. Atkinson, S. Ourselin, B. F. Hutton and S. R. Arridge, <a href="http://dx.doi.org/10.1088/0266-5611/31/1/015001">Joint reconstruction of PET-MRI by exploiting structural similarity</a>, Inverse Problems 31(1), 015001, 2015 [<a href="downloads/bib/ehrhardt_et_al_2015.bib">BibTeX</a>] <br><br>
+							
+<b>Acknowledgements:</b> The software uses <i>L-BFGS-B</i> to solve the constrained minimization problem which needs to be downloaded separately. The Fortan code can be obtained from [<a href="http://www.ece.northwestern.edu/~nocedal/lbfgsb.html">link</a>, accessed September 2014] and the Matlab interface from [<a href="http://www.mathworks.co.uk/matlabcentral/fileexchange/35104-lbfgsb--l-bfgs-b--mex-wrapper">link</a>, accessed September 2014]. 
+</div>
+
+<!--- RGB --->
+<div class='text-heading'> <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6576903" id="RGB">Vector-Valued Image Processing by Parallel Level Sets</a> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/Parallel Level Sets.rar">download software (14 MB)</a>]</div>
+
+<div class='text-body' align='justify'> 
+<a href="http://www.damtp.cam.ac.uk/user/me404/"><b>M. J. Ehrhardt</b></a>,
+<a href="http://www0.cs.ucl.ac.uk/staff/s.arridge/"><b>S. R. Arridge</b></a> <br><br>
+									
+<b>Paper:</b> [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6576903">in IEEE Xplore</a>]
+[<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/Ehrhardt and Arridge, 2013.pdf">download preprint (11 MB)</a>]<br><br>
+					
+<table>
+<tr><td width="500px" align='justify'> <b>Abstract:</b> Vector-valued images such as RGB color images or multimodal medical images show a strong interchannel correlation, which is not exploited by most image processing tools. We propose a new notion of treating vector-valued images which is based on the angle between the spatial gradients of their channels. Through minimizing a cost functional that penalizes large angles, images with parallel level sets can be obtained. After formally introducing this idea and the corresponding cost functionals, we discuss their Gâteaux derivatives that lead to a diffusion-like gradient descent scheme. We illustrate the properties of this cost functional by several examples in denoising and demosaicking of RGB color images. They show that parallel level sets are a suitable concept for color image enhancement. Demosaicking with parallel level sets gives visually perfect results for low noise levels. Furthermore, the proposed functional yields sharper images than the other approaches in comparison. </td>
+<td width='40px'></td>
+<td><img src='images/software/TIP_PLS/TIP_shapes.jpg' width="230px"/><br> By penalizing parallel level sets two images evolve to a common shape.</td></tr>
+</table> <br>
+					
+<b>Example Result:</b>
+<table width="100%"><tr>
+<td align="center"> <img src="images/software/TIP_PLS/TIP_leopard.jpg" width="240px" </td>
+<td align="center"> <img src="images/software/TIP_PLS/TIP_leopard_bayer_05.jpg" width="240px" </td>
+<td align="center"> <img src="images/software/TIP_PLS/TIP_leopard_demosaicking_05_PL.jpg" width="240px"> </td>
+</tr></table>
+Demosaicking of the image "leopard" (left) with the noisy data zero filled at missing values (middle). Using parallel level sets one recovers the image visually perfect (right).<br><br>
+    				
+<b>Tested Configurations:</b> The software was tested on Ubuntu 12.04 LTS with Matlab 2013a. If you have tested different configurations successfully please let me know <a href="mailto:m.j.ehrhardt@damtp.cam.ac.uk">m.j.ehrhardt@damtp.cam.ac.uk</a>. Please also report me in the case of failure.<br><br>
+					
+<b>Reference:</b> M. J. Ehrhardt and S. R. Arridge, <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6576903">Vector-Valued Image Processing by Parallel Level Sets </a>, IEEE Transactions on Image Processing, Volume 23, Number 1, Pages 9-18, 2014 [<a href="downloads/bib/ehrhardtarridge2014.bib">BibTeX</a>]<br><br>
+			
+<b>Acknowledgements:</b> The <i>original images</i> are part of the training data set of the <a href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/" target='_blank'>Berkeley Segmentation Dataset</a>, [<a href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/BSDS300-images.tgz">download (21 MB)</a>, accessed March 2013]. The images have different names in the data base: leopard = 159029, lake = 176035, pyramid = 299091, bugs = 35008, wolf = 42078. The <i>noisy images</i> can be found on <a href="http://www.cs.utoronto.ca/~strider/Denoise/Benchmark/index.html" target='_blank'>Francisco J. Estrada's web page</a>, [<a href="http://www.cs.utoronto.ca/~strider/Denoise/Benchmark/Denoising_Benchmark.tgz">download (1 GB)</a>, accessed March 2013]. The images have different names on this page: leopard = 0072, lake = 0094, pyramid = 0194, bugs = 0213, wolf = 0246.<br> 
+We used the <i>Structural Similarity</i> as a figure of merit. To make use of it in the software please download the file ssim_index.m [<a href="https://ece.uwaterloo.ca/~z70wang/research/ssim/ssim_index.m">download (6 KB)</a>, accessed March 2013] available from the <a href="https://ece.uwaterloo.ca/~z70wang/research/ssim/">author's web page</a>.
+
+</div></td>

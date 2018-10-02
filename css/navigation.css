@@ -1,0 +1,62 @@
+td.navigation-banner {
+	background-color: rgb(220,220,220); 
+	width: 170px;
+	padding: 10px}
+
+div.navigation-outer {
+	width: 150px;
+	vertical-align: middle;
+	padding: 3px;
+	-moz-border-radius:100px 100px 100px 100px;
+	-webkit-border-top-right-radius:100px;
+	-webkit-border-bottom-right-radius:100px;
+	-webkit-border-top-left-radius:100px;
+	-webkit-border-bottom-left-radius:100px;
+	border-radius:100px 100px 100px 100px;
+	margin: 3px}
+	
+div.navigation-outer:hover {
+	background-color: rgba(35,125,154,0.1)}
+
+div.navigation-outer-active {
+	background-color: rgba(35,125,154,0.4)}
+	
+div.navigation-outer-active:hover {
+	background-color: rgba(35,125,154,0.4)}
+
+div.navigation-pic {	
+	height: 44px; 
+	width: 44px;
+	display: table-cell;
+	background-color: rgba(35,125,154,1);
+	background-position: center center;
+	background-size: 36px 36px;
+	background-repeat: no-repeat;
+	-moz-border-radius:100px 100px 100px 100px;
+	-webkit-border-top-right-radius:100px;
+	-webkit-border-bottom-right-radius:100px;
+	-webkit-border-top-left-radius:100px;
+	-webkit-border-bottom-left-radius:100px;
+	border-radius:100px 100px 100px 100px;
+	opacity: 1;}
+	
+div.navigation-text {
+	display: table-cell;
+	color: black;
+	vertical-align: middle;
+	text-align: left;
+	padding: 10px}
+				
+div.personOn {background-image: url(../images/navigation/person_white.png)}
+div.personOff {background-image: url(../images/navigation/person_black.png)}
+div.cvOn {background-image: url(../images/navigation/cv_white.png)}
+div.cvOff {background-image: url(../images/navigation/cv_black.png)}
+div.researchOn  {background-image: url(../images/navigation/science_white.png)}
+div.researchOff  {background-image: url(../images/navigation/science_black.png)}
+div.teachingOn  {background-image: url(../images/navigation/blackboard_white.png)}
+div.teachingOff  {background-image: url(../images/navigation/blackboard_black.png)}
+div.softwareOn {background-image: url(../images/navigation/software_white.png)}
+div.softwareOff {background-image: url(../images/navigation/software_black.png)}
+div.contactOn{background-image: url(../images/navigation/mail_white.png)}
+div.contactOff {background-image: url(../images/navigation/mail_black.png)}
+				

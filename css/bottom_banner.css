@@ -1,0 +1,47 @@
+<!--
+/*By Matthias J. Ehrhardt
+http://www0.cs.ucl.ac.uk/staff/M.Ehrhardt/
+email: matthias.ehrhardt.11 [-at-] ucl [-dot-] ac [-dot-] uk
+
+Last Modified: 2015-05-02*/
+-->
+
+table.bottom-banner {
+	width: 100%;
+	/*height: 200px;*/
+	background-color: rgb(220,220,220);}
+	
+td.bottom-banner{
+	width: 80px; 
+	height: 80px; 
+	vertical-align: bottom;
+	margin: 10px;
+}
+	
+div.bottom-banner {
+	background-image: url(../images/sprite_120x80.png);
+	background-repeat: no-repeat; 
+	background-position: center;
+	width: 120px; 
+	height: 80px;
+	margin-left: auto; 
+	margin-right: auto;
+	opacity: .5;}
+
+div.bottom-banner:hover {
+	opacity: 1;}
+
+div.TIPShapes{background-position: -120px 0px;}
+div.TIPShapes:hover{background-position: 0px 0px;}
+div.TIPLake{background-position: -120px -80px;}
+div.TIPLake:hover{background-position: 0px -80px;}
+div.GEO{background-position: -120px -161px;}
+div.GEO:hover{background-position: 0px -161px;}
+div.IPPETMRI{background-position: -120px -241px;}
+div.IPPETMRI:hover{background-position: -0px -241px;}
+div.RepResearch{background-position: -120px -321px;}
+div.RepResearch:hover{background-position: -0px -321px;}
+div.CIP{background-position: -120px -401px;}
+div.CIP:hover{background-position: -0px -401px;}
+div.CMIC{background-position: -120px -481px;}
+div.CMIC:hover{background-position: -0px -481px;}
