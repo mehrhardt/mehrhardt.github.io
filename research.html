@@ -1,195 +1,299 @@
----
-layout: base
----
+<!DOCTYPE html>
+<html>
+<title>Matthias J. Ehrhardt</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+div.my-anchor {
+    display: block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
+}
 
-<!-- navigation banner -->
-<td class='navigation-banner'>
-	<a href='index.html'><div class='navigation-outer'><div class='navigation-pic personOff'></div><div class='navigation-text'>About Me </div></div></a>	
-	<a href='cv.html'><div class='navigation-outer'><div class='navigation-pic cvOff'></div><div class='navigation-text'>CV </div></div></a>	
-	<a href='research.html'><div class='navigation-outer navigation-outer-active'><div class='navigation-pic researchOn'></div><div class='navigation-text'>Research </div></div></a>	
-	<a href='teaching.html'><div class='navigation-outer'><div class='navigation-pic teachingOff'></div><div class='navigation-text'>Teaching </div></div></a>
-	<a href='software.html'><div class='navigation-outer'><div class='navigation-pic softwareOff'></div><div class='navigation-text'>Software </div></div></a>
-</td>
- 
-<!-- main content -->
-<td class='middle'>
-<!-- papers -->
-<div class='text-heading'>Publications</div>
-<div class='text-body'>
+.my-accordion:hover {
+    background-color: #ccc; 
+}
+	
+div.bottom-banner {
+	background-image: url(../images/contact_sprite_trans.png);
+	background-repeat: no-repeat; 
+	background-position: center;
+	height: 40px;
+	margin-left: auto; 
+	margin-right: auto;
+	opacity: .5;}
 
-* denotes alphabetical order of authors <br> <br>
+div.bottom-banner:hover {
+	opacity: 1;}
 
-<div class='text-subheading'>Peer-Reviewed Journal Publications</div>
-<table class='list'>
 
-<tr><td>2018</td><td> * A. Chambolle, <b>M. J. Ehrhardt</b>, P. Richt&aacute;rik and C.-B. Sch&ouml;nlieb, <a href="https://arxiv.org/abs/1706.04957">Stochastic Primal-Dual Hybrid Gradient Algorithm with Arbitrary Sampling and Imaging Applications</a>, accepted in SIAM Optimization[<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/Chambolle_et_al_2017.pdf">pdf (6 MB)</a>] [<a href="https://arxiv.org/abs/1706.04957">arXiv</a>] [<a href="downloads/bib/chambolle_et_al_2017.bib">bibTeX</a>] [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/20170830_Ehrhardt.pdf">poster (2 MB)</a>] [<a href="https://github.com/mehrhardt/spdhg">software@github</a>] [<a href="https://github.com/odlgroup/odl/tree/master/odl/contrib/solvers/spdhg">software@ODL</a>]</td></tr>
+div.linkedin{background-position: -40px 0px; width: 40px}
+div.linkedin:hover{background-position: 0px 0px;}
+div.orcid{background-position: -40px -40px; width: 40px}
+div.orcid:hover{background-position: 0px -40px;}
+div.researchgate{background-position: -40px -80px; width: 40px}
+div.researchgate:hover{background-position: 0px -80px;}
+div.google{background-position: -80px -40px; width: 117px}
+div.google:hover{background-position: -80px 0px;}
+div.github{background-position: -40px -120px; width: 40px}
+div.github:hover{background-position: 0px -120px;}
 
-<tr><td></td><td> * L. Bungert, D. A. Coomes, <b>M. J. Ehrhardt</b>, J. Rasch, R. Reisenhofer and C.-B. Sch&ouml;nlieb, <a href="http://iopscience.iop.org/article/10.1088/1361-6420/aaaf63/meta">Blind Image Fusion for Hyperspectral Imaging with the Directional Total Variation</a>, Inverse Problems 34(4), 044003 [<a href="http://iopscience.iop.org/article/10.1088/1361-6420/aaaf63/meta">print version</a>] [<a href="https://arxiv.org/abs/1710.05705">arXiv</a>] [<a href="downloads/bib/bungert_et_al_2017.bib">bibTeX</a>] [<a href="https://github.com/mehrhardt/blind_remote_sensing">software@github</a>] [<a href="https://git.uis.cam.ac.uk/x/maths/cia/public/papers/inverseproblems_remotesensing.git">software@gitcam</a>]</td></tr>
 
-<tr><td></td><td> Y.-J. Tsai, A. Bousse, <b>M. J. Ehrhardt</b>, C. W. Stearns, S. Ahn, B. F. Hutton, S. R. Arridge and K. Thielemans, <a href="http://ieeexplore.ieee.org/document/8239640/?arnumber=8239640&source=authoralert">Fast Quasi-Newton Algorithms for Penalized Reconstruction in Emission Tomography and Further Improvements via Preconditioning</a>, IEEE Transactions on Medical Imaging 37(4), pp. 1000-1010 [<a href="http://ieeexplore.ieee.org/document/8239640/?arnumber=8239640&source=authoralert">print version</a>]</td></tr>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
 
-<tr><td></td><td> P. J. Markiewicz, <b>M. J. Ehrhardt</b>, K. Erlandsson, P. J. Noonan, A. Barnes, J. M Schott, D. Atkinson, S. R. Arridge, B. F. Hutton and S. Ourselin, <a href="https://link.springer.com/article/10.1007/s12021-017-9352-y">NiftyPET: A high-throughput software platform for high quantitative accuracy and precision PET imaging and analysis</a>, Neuroinformatics 16(1), pp. 95–115 [<a href="https://link.springer.com/article/10.1007/s12021-017-9352-y">print version</a>] [<a href="https://cmiclab.cs.ucl.ac.uk/pmarkiew/NiftyPET">software</a>] </td></tr>
+<body class="w3-content" style="max-width:1200px">
 
-<tr><td>2016</td><td> <b>M. J. Ehrhardt</b> and M. M. Betcke, <a href="http://epubs.siam.org/doi/10.1137/15M1047325">Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</a>, SIAM Journal on Imaging Sciences 9(3), pp. 1084–1106 [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/Ehrhardt_and_Betcke_2016.pdf">pdf (6 MB)</a>] [<a href="http://epubs.siam.org/doi/10.1137/15M1047325">print version</a>] [<a href="https://arxiv.org/abs/1511.06631">arXiv</a>] [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>] [<a href="software.html#MRIMRI">software</a>] [<a href="downloads/bib/ehrhardtbetcke2016.bib">bibTeX</a>] </td></tr>
-
-<tr><td></td><td> <b>M. J. Ehrhardt</b>, P. J. Markiewicz, M. Liljeroth, A. Barnes, V. Kolehmainen, J. S. Duncan, L. Pizarro, D. Atkinson, S. Ourselin, B. F. Hutton, K. Thielemans and S. R. Arridge, <a href="http://doi.org/10.1109/TMI.2016.2549601">PET Reconstruction with an Anatomical MRI Prior using Parallel Level Sets</a>, IEEE Transactions on Medical Imaging 35(9), pp. 2189–2199 [<a href="http://doi.org/10.1109/TMI.2016.2549601">print version</a>] [<a href="downloads/bib/ehrhardt_et_al_2016.bib">bibTeX</a>]</td></tr>
-
-<tr><td>2015</td><td> <b>M. J. Ehrhardt</b>, K. Thielemans, L. Pizarro, D. Atkinson, S. Ourselin, B. F. Hutton and S. R. Arridge, <a href="http://dx.doi.org/10.1088/0266-5611/31/1/015001">Joint reconstruction of PET-MRI by exploiting structural similarity</a>, Inverse Problems 31(1), 015001 <b>(selected as Highlight of 2015)</b> [<a href="http://dx.doi.org/10.1088/0266-5611/31/1/015001">print version</a>] [<a href="software.html#PETMRI">software</a>] [<a href="downloads/bib/ehrhardt_et_al_2015.bib">bibTeX</a>]</td></tr>
-
-<tr><td>2014</td><td> <b>M. J. Ehrhardt</b> and S. R. Arridge, <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6576903">Vector-Valued Image Processing by Parallel Level Sets</a>, IEEE Transactions on Image Processing 23(1), pp. 9-18 [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6576903">print version</a>] [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/Ehrhardt and Arridge, 2013.pdf">preprint (11MB)</a>] [<a href="software.html#RGB">software</a>] [<a href="downloads/bib/ehrhardtarridge2014.bib">bibTeX</a>]</td></tr>								
-
-<tr><td>2012</td><td> <b>M. J. Ehrhardt</b>, H. Villinger and S. Schiffler, <a href="http://www.sciencedirect.com/science/article/pii/S0098300412001173">Evaluation of Decomposition Tools for Sea Floor Pressure Data: A Practical Comparison of Modern and Classical Approaches</a>, Computers & Geosciences 45, pp. 4-12 [<a href="http://www.sciencedirect.com/science/article/pii/S0098300412001173">print version</a>] [<a href="downloads/bib/ehrhardtvillingerschiffler2012.bib">bibTeX</a>] [<a href="http://arxiv.org/abs/1108.3767">arXiv</a>]</td></tr>
-</table> 
-
-<div class='text-subheading'>Preprints</div>
-<table class='list'>
-
-<tr><td>2018</td><td> <b>M. J. Ehrhardt</b>, P. J. Markiewicz, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1808.07150">
-Faster PET Reconstruction with Non-Smooth Priors by Randomization and Preconditioning</a>, [<a href="https://arxiv.org/abs/1808.07150">arXiv</a>] </td></tr>
-
-<tr><td></td><td> V. Corona, M. Benning, <b>M. J. Ehrhardt</b>, L. F. Gladden, R. Mair, A. Reci, A. J. Sederman, S. Reichelt, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1807.01660">
-Enhancing joint reconstruction and segmentation with non-convex Bregman iteration</a>, [<a href="https://arxiv.org/abs/1807.01660">arXiv</a>] </td></tr>
-
-<tr><td></td><td> * <b>M. J. Ehrhardt</b>, E. S. Riis, T. Ringholm, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1805.06444">
-A geometric integration approach to smooth optimisation: Foundations of the discrete gradient method</a>, [<a href="https://arxiv.org/abs/1805.06444">arXiv</a>] </td></tr>
-
-<tr><td></td><td> E. S. Riis,  <b>M. J. Ehrhardt</b>, G. R. W. Quispel, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1807.07554">
-A geometric integration approach to nonsmooth, nonconvex optimisation</a>, [<a href="https://arxiv.org/abs/1807.07554">arXiv</a>] </td></tr>
-
-<tr><td>2017</td><td> * M. Benning, M. M. Betcke, <b>M. J. Ehrhardt</b>, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1710.05705">Choose Your Path Wisely: Gradient Descent in a Bregman Distance Framework</a>, [<a href="https://arxiv.org/abs/1712.04045">arXiv</a>] </td></tr>
-
-</table>
-
-<div class='text-subheading'>Peer-Reviewed Conference Proceedings</div>
-<table class='list'>
-
-<tr><td>2017</td><td> <b>M. J. Ehrhardt</b>, P. Markiewicz, A. Chambolle, P. Richtárik, J. Schott, C.-B. Sch&ouml;nlieb, <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10394/103941O/Faster-PET-reconstruction-with-a-stochastic-primal-dual-hybrid-gradient/10.1117/12.2272946.full?SSO=1">Faster PET
-Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</a>, Proceedings of SPIE [<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10394/103941O/Faster-PET-reconstruction-with-a-stochastic-primal-dual-hybrid-gradient/10.1117/12.2272946.full?SSO=1">SPIE library</a>] [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/20170809_Ehrhardt.pdf">preprint (2 MB)</a>] [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/20170830_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr> 
-
-<tr><td>2016</td><td> P. Markiewicz, <b>M. J. Ehrhardt</b>, N. Burgos, D. Atkinson, S. R. Arridge, B. F. Hutton and S. Ourselin, <a href="http://discovery.ucl.ac.uk/1508188/1/abstract.pdf">Unified acquisition modelling across PET imaging systems: unified scatter modelling</a>, IEEE Nuclear Science Symposium & Medical Imaging Conference [<a href="http://discovery.ucl.ac.uk/1508188/1/abstract.pdf">UCL discovery</a>]</td></tr> 
-
-<tr><td>2015</td><td> Y.-J. Tsai, A. Bousse, <b>M. J. Ehrhardt</b>, B. F. Hutton, S. R. Arridge and K. Thielemans, <a href="http://ieeexplore.ieee.org/abstract/document/7582101/">Performance Evaluation of MAP Algorithms with Different Penalties, Object Geometries and Noise Levels</a>, IEEE Nuclear Science Symposium & Medical Imaging Conference [<a href="http://ieeexplore.ieee.org/abstract/document/7582101/">print version</a>]</td></tr> 
-
-<tr><td>2014</td><td> P. Markiewicz, K. Thielemans, <b>M. J. Ehrhardt</b>, J. Jiao, N. Burgos, D. Atkinson, S. R. Arridge, B. F. Hutton and S. Ourselin, <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7430963">High Throughput CUDA Implementation of Accurate Geometric Modelling for Iterative Reconstruction of PET Data </a>, IEEE Nuclear Science Symposium & Medical Imaging Conference [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7430963">print version</a>]</td></tr> 
-
-<tr><td></td><td> <b>M. J. Ehrhardt</b>, K. Thielemans, L. Pizarro, P. Markiewicz, D. Atkinson, S. Ourselin, B. F. Hutton and S. R. Arridge, <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7430895">Joint Reconstruction of PET-MRI by Parallel Level Sets </a>, IEEE Nuclear Science Symposium & Medical Imaging Conference <b>(best student paper finalist) </b> [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7430895">print version</a>]</td></tr>
-</table>
-
-<div class='text-subheading'>Miscellaneous</div>
-<table class='list'>
-
-<tr><td>2016</td><td> * M. Benning, M. M. Betcke, <b>M. J. Ehrhardt</b> and C.-B. Sch&ouml;nlieb, <a href="http://arxiv.org/abs/1612.02506">Gradient descent in a generalised Bregman distance framework</a>, MI Lecture Notes series of Kyushu University, Vol. 74 [<a href="http://www.imi.kyushu-u.ac.jp/eng/publishes/pub_inner/id:2">print version</a>] [<a href="http://arxiv.org/abs/1612.02506">arXiv</a>] [<a href="https://doi.org/10.17863/CAM.6489">code</a>]</td></tr> 
-
-<tr><td>2015</td><td> <b>M. J. Ehrhardt</b>, <a href="http://discovery.ucl.ac.uk/1469770/">Joint Reconstruction for Multi-Modality Imaging with Common Structure</a>, Ph.D. Thesis, University College London, UK [<a href="http://discovery.ucl.ac.uk/1469770/">pdf@UCL</a>] </td></tr> 
-
-<tr><td>2011</td><td> <b>M. J. Ehrhardt</b>, <a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/Ehrhardt_Sparsity_in_Geosciences_2011-11-21.pdf">Sparsity in Geosciences: Sparse Decomposition for Analysis of Sea Floor Pressure Data</a>, Diploma Thesis, University of Bremen, Germany [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/Ehrhardt_Sparsity_in_Geosciences_2011-11-21.pdf" target="_blank">pdf (5 MB)</a>] </td></tr> 
-</table>
-
+<!-- Sidebar/menu -->
+<div class="w3-bar w3-top w3-black w3-xlarge" style="max-width:1200px">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Matthias J. Ehrhardt</div><br>
+  <div class="w3-bar w3-theme w3-left-align w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">About me</a>
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white">Teaching</a>
+    <a href="software.html" class="w3-bar-item w3-button w3-hover-white">Software</a>
+  </div>
 </div>
 
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main">
+<div style="margin-top:140px"></div>
+
+<h1 class="w3-padding">Research</h1>
+
+<div class="w3-padding w3-container">* denotes alphabetical order of authors</div>
+
+<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Peer-Reviewed Journal Publications</div>
+  <div><table class="w3-table">
+    	<tr><th style="width:50px">2018</th><td>* A. Chambolle, <b>M. J. Ehrhardt</b>, P. Richt&aacute;rik and C.-B. Sch&ouml;nlieb, <a href="https://arxiv.org/abs/1706.04957">Stochastic Primal-Dual Hybrid Gradient Algorithm with Arbitrary Sampling and Imaging Applications</a>, accepted in SIAM Optimization [<a href="https://arxiv.org/abs/1706.04957">arXiv</a>] [<a href="data/20170830_Ehrhardt.pdf">poster (2 MB)</a>] [<a href="https://github.com/mehrhardt/spdhg">software@github</a>] [<a href="https://github.com/odlgroup/odl/tree/master/odl/contrib/solvers/spdhg">software@ODL</a>]</td></tr>
+
+    	<tr><th></th><td>* L. Bungert, D. A. Coomes, <b>M. J. Ehrhardt</b>, J. Rasch, R. Reisenhofer and C.-B. Sch&ouml;nlieb, <a href="http://iopscience.iop.org/article/10.1088/1361-6420/aaaf63/meta">Blind Image Fusion for Hyperspectral Imaging with the Directional Total Variation</a>, Inverse Problems 34(4), 044003 [<a href="http://iopscience.iop.org/article/10.1088/1361-6420/aaaf63/meta">print version</a>] [<a href="https://arxiv.org/abs/1710.05705">arXiv</a>] [<a href="https://github.com/mehrhardt/blind_remote_sensing">software@github</a>] [<a href="https://git.uis.cam.ac.uk/x/maths/cia/public/papers/inverseproblems_remotesensing.git">software@gitcam</a>]</td></tr>
+
+    	<tr><th></th><td>Y.-J. Tsai, A. Bousse, <b>M. J. Ehrhardt</b>, C. W. Stearns, S. Ahn, B. F. Hutton, S. R. Arridge and K. Thielemans, <a href="http://ieeexplore.ieee.org/document/8239640/?arnumber=8239640&source=authoralert">Fast Quasi-Newton Algorithms for Penalized Reconstruction in Emission Tomography and Further Improvements via Preconditioning</a>, IEEE Transactions on Medical Imaging 37(4), pp. 1000-1010 [<a href="http://ieeexplore.ieee.org/document/8239640/?arnumber=8239640&source=authoralert">print version</a>]</td></tr>
+
+    	<tr><th></th><td>P. J. Markiewicz, <b>M. J. Ehrhardt</b>, K. Erlandsson, P. J. Noonan, A. Barnes, J. M Schott, D. Atkinson, S. R. Arridge, B. F. Hutton and S. Ourselin, <a href="https://link.springer.com/article/10.1007/s12021-017-9352-y">NiftyPET: A high-throughput software platform for high quantitative accuracy and precision PET imaging and analysis</a>, Neuroinformatics 16(1), pp. 95–115 [<a href="https://link.springer.com/article/10.1007/s12021-017-9352-y">print version</a>] [<a href="https://cmiclab.cs.ucl.ac.uk/pmarkiew/NiftyPET">software</a>]</td></tr>
+
+    	<tr><th>2016</th><td><b>M. J. Ehrhardt</b> and M. M. Betcke, <a href="http://epubs.siam.org/doi/10.1137/15M1047325">Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</a>, SIAM Journal on Imaging Sciences 9(3), pp. 1084–1106 [<a href="http://epubs.siam.org/doi/10.1137/15M1047325">print version</a>] [<a href="https://arxiv.org/abs/1511.06631">arXiv</a>] [<a href="data/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>] [<a href="software.html#MRIMRI">software</a>]</td></tr>
+
+    	<tr><th></th><td><b>M. J. Ehrhardt</b>, P. J. Markiewicz, M. Liljeroth, A. Barnes, V. Kolehmainen, J. S. Duncan, L. Pizarro, D. Atkinson, S. Ourselin, B. F. Hutton, K. Thielemans and S. R. Arridge, <a href="http://doi.org/10.1109/TMI.2016.2549601">PET Reconstruction with an Anatomical MRI Prior using Parallel Level Sets</a>, IEEE Transactions on Medical Imaging 35(9), pp. 2189–2199 [<a href="http://doi.org/10.1109/TMI.2016.2549601">print version</a>]</td></tr>
+
+    	<tr><th>2015</th><td><b>M. J. Ehrhardt</b>, K. Thielemans, L. Pizarro, D. Atkinson, S. Ourselin, B. F. Hutton and S. R. Arridge, <a href="http://dx.doi.org/10.1088/0266-5611/31/1/015001">Joint reconstruction of PET-MRI by exploiting structural similarity</a>, Inverse Problems 31(1), 015001 <b>(selected as Highlight of 2015)</b> [<a href="http://dx.doi.org/10.1088/0266-5611/31/1/015001">print version</a>] [<a href="software.html#PETMRI">software</a>]</td></tr>
+
+    	<tr><th>2014</th><td><b>M. J. Ehrhardt</b> and S. R. Arridge, <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6576903">Vector-Valued Image Processing by Parallel Level Sets</a>, IEEE Transactions on Image Processing 23(1), pp. 9-18 [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6576903">print version</a>] [<a href="data/Ehrhardt and Arridge, 2013.pdf">preprint (11MB)</a>] [<a href="software.html#RGB">software</a>]</td></tr>
+
+    	<tr><th>2012</th><td><b>M. J. Ehrhardt</b>, H. Villinger and S. Schiffler, <a href="http://www.sciencedirect.com/science/article/pii/S0098300412001173">Evaluation of Decomposition Tools for Sea Floor Pressure Data: A Practical Comparison of Modern and Classical Approaches</a>, Computers & Geosciences 45, pp. 4-12 [<a href="http://www.sciencedirect.com/science/article/pii/S0098300412001173">print version</a>] [<a href="http://arxiv.org/abs/1108.3767">arXiv</a>]</td></tr>
+  </table></div><div class="w3-container"></div>
+
+
+
+<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Preprints</div>
+  <div><table class="w3-table">
+    	<tr><th style="width:50px">2018</th><td><b>M. J. Ehrhardt</b>, P. J. Markiewicz, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1808.07150">Faster PET Reconstruction with Non-Smooth Priors by Randomization and Preconditioning</a>, [<a href="https://arxiv.org/abs/1808.07150">arXiv</a>]</td></tr>
+
+    	<tr><th></th><td>V. Corona, M. Benning, <b>M. J. Ehrhardt</b>, L. F. Gladden, R. Mair, A. Reci, A. J. Sederman, S. Reichelt, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1807.01660">
+Enhancing joint reconstruction and segmentation with non-convex Bregman iteration</a>, [<a href="https://arxiv.org/abs/1807.01660">arXiv</a>]</td></tr>
+
+    	<tr><th></th><td>* <b>M. J. Ehrhardt</b>, E. S. Riis, T. Ringholm, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1805.06444">A geometric integration approach to smooth optimisation: Foundations of the discrete gradient method</a>, [<a href="https://arxiv.org/abs/1805.06444">arXiv</a>]</td></tr>
+
+    	<tr><th></th><td>E. S. Riis,  <b>M. J. Ehrhardt</b>, G. R. W. Quispel, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1807.07554">A geometric integration approach to nonsmooth, nonconvex optimisation</a>, [<a href="https://arxiv.org/abs/1807.07554">arXiv</a>]</td></tr>
+
+    	<tr><th>2017</th><td>* M. Benning, M. M. Betcke, <b>M. J. Ehrhardt</b>, C.-B. Schönlieb, <a href="https://arxiv.org/abs/1710.05705">Choose Your Path Wisely: Gradient Descent in a Bregman Distance Framework</a>, [<a href="https://arxiv.org/abs/1712.04045">arXiv</a>]</td></tr>
+
+  </table></div><div class="w3-container"></div>
+
+
+
+<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Peer-Reviewed Conference Proceedings</div>
+  <div><table class="w3-table">
+    	<tr><th style="width:50px">2017</th><td><b>M. J. Ehrhardt</b>, P. Markiewicz, A. Chambolle, P. Richtárik, J. Schott, C.-B. Sch&ouml;nlieb, <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10394/103941O/Faster-PET-reconstruction-with-a-stochastic-primal-dual-hybrid-gradient/10.1117/12.2272946.full?SSO=1">Faster PET
+Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</a>, Proceedings of SPIE [<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10394/103941O/Faster-PET-reconstruction-with-a-stochastic-primal-dual-hybrid-gradient/10.1117/12.2272946.full?SSO=1">SPIE library</a>] [<a href="data/20170809_Ehrhardt.pdf">preprint (2 MB)</a>] [<a href="data/20170830_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+    	<tr><th>2016</th><td>P. Markiewicz, <b>M. J. Ehrhardt</b>, N. Burgos, D. Atkinson, S. R. Arridge, B. F. Hutton and S. Ourselin, <a href="http://discovery.ucl.ac.uk/1508188/1/abstract.pdf">Unified acquisition modelling across PET imaging systems: unified scatter modelling</a>, IEEE Nuclear Science Symposium & Medical Imaging Conference [<a href="http://discovery.ucl.ac.uk/1508188/1/abstract.pdf">UCL discovery</a>]</td></tr>
+
+    	<tr><th>2015</th><td>Y.-J. Tsai, A. Bousse, <b>M. J. Ehrhardt</b>, B. F. Hutton, S. R. Arridge and K. Thielemans, <a href="http://ieeexplore.ieee.org/abstract/document/7582101/">Performance Evaluation of MAP Algorithms with Different Penalties, Object Geometries and Noise Levels</a>, IEEE Nuclear Science Symposium & Medical Imaging Conference [<a href="http://ieeexplore.ieee.org/abstract/document/7582101/">print version</a>]</td></tr>
+
+    	<tr><th>2014</th><td> P. Markiewicz, K. Thielemans, <b>M. J. Ehrhardt</b>, J. Jiao, N. Burgos, D. Atkinson, S. R. Arridge, B. F. Hutton and S. Ourselin, <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7430963">High Throughput CUDA Implementation of Accurate Geometric Modelling for Iterative Reconstruction of PET Data </a>, IEEE Nuclear Science Symposium & Medical Imaging Conference [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7430963">print version</a>]</td></tr> 
+
+	<tr><th></th><td> <b>M. J. Ehrhardt</b>, K. Thielemans, L. Pizarro, P. Markiewicz, D. Atkinson, S. Ourselin, B. F. Hutton and S. R. Arridge, <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7430895">Joint Reconstruction of PET-MRI by Parallel Level Sets </a>, IEEE Nuclear Science Symposium & Medical Imaging Conference <b>(best student paper finalist) </b> [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7430895">print version</a>]</td></tr>
+
+  </table></div><div class="w3-container"></div>
+
+
+
+<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Miscellaneous</div>
+  <div><table class="w3-table">
+	<tr><th>2016</th><td> * M. Benning, M. M. Betcke, <b>M. J. Ehrhardt</b> and C.-B. Sch&ouml;nlieb, <a href="http://arxiv.org/abs/1612.02506">Gradient descent in a generalised Bregman distance framework</a>, MI Lecture Notes series of Kyushu University, Vol. 74 [<a href="http://www.imi.kyushu-u.ac.jp/eng/publishes/pub_inner/id:2">print version</a>] [<a href="http://arxiv.org/abs/1612.02506">arXiv</a>] [<a href="https://doi.org/10.17863/CAM.6489">code</a>]</td></tr> 
+
+	<tr><th>2015</th><td> <b>M. J. Ehrhardt</b>, <a href="http://discovery.ucl.ac.uk/1469770/">Joint Reconstruction for Multi-Modality Imaging with Common Structure</a>, Ph.D. Thesis, University College London, UK [<a href="http://discovery.ucl.ac.uk/1469770/">pdf@UCL</a>] </td></tr> 
+
+	<tr><th>2011</th><td> <b>M. J. Ehrhardt</b>, <a href="data/Ehrhardt_Sparsity_in_Geosciences_2011-11-21.pdf">Sparsity in Geosciences: Sparse Decomposition for Analysis of Sea Floor Pressure Data</a>, Diploma Thesis, University of Bremen, Germany [<a href="data/Ehrhardt_Sparsity_in_Geosciences_2011-11-21.pdf" target="_blank">pdf (5 MB)</a>] </td></tr> 
+
+  </table></div><div class="w3-container"></div>
+
+
+
 <!-- CONFERENCES -->
-<div class='text-heading'> Communication</div>
-<div class='text-body'>
+<h1 class="w3-padding">Communication</h1>
 
-# denotes invited presentations <br> <br>
-
-<!--<div class='text-subheading'>Upcoming Conferences and Workshops</div>
-<table class='list'>
-
-<tr><td>2018</td><td> # <a href="https://ismp2018.sciencesconf.org/">ISMP 2018: International Symposium on Mathematical Programming</a>, Bordeaux, France.</td></tr>
-</table> -->
-
-<div class='text-subheading'>Oral Presentations at Conferences, Workshops and Seminars</div>
-<table class='list'>
-
-<tr><td>2018</td><td> # <a href="https://ismp2018.sciencesconf.org/">ISMP 2018: International Symposium on Mathematical Programming</a>, Bordeaux, France. <i>Stochastic PDHG with Arbitrary Sampling and Applications to Medical Imaging</i></td></tr>
-
-<tr><td></td><td><a href="https://www.siam-is18.dm.unibo.it/">SIAM Conference on Imaging Science</a>, Bologna, Italy. <i>Faster PET-MR Image Reconstruction by Stochastic Optimization</i> </td></tr>
-
-<tr><td></td><td> # Applied and Interdisciplenary Mathematics Seminar, University of Bath, UK. <i>A Randomized Algorithm for Convex Optimization and Medical Imaging Applications</i> </td></tr>
-
-<tr><td></td><td> # Scientific Computing Seminar, DTU, Denmark. <i>A Randomized Algorithm for Convex Optimization and Medical Imaging Applications</i> </td></tr>
-
-<tr><td></td><td> # <a href="https://obd.kaust.edu.sa/pages/ConfernceHome.aspx">Optimization and Big Data</a>, KAUST, Saudi Arabia. <i>Stochastic PDHG with Non-Uniform Sampling and Applications to Medical Imaging</i> </td></tr>
-
-<tr><td>2017</td><td> # Mathemematics and Applications Seminar, University of Sussex, UK. <i>Stochastic Optimization for Non-Smooth Imaging Applications</i> </td></tr>
-
-<tr><td></td><td><a href="http://www.heidelberg-laureate-forum.org/">5th Heidelberg Laureate Forum</a>, Heidelberg, Germany. <i>Stable Architectures for Deep Neural Networks</i> </td></tr>
-
-<tr><td></td><td><a href="https://www.turing-gateway.cam.ac.uk/event/tgmw47">IMA Conference on Inverse Problems from Theory to Application</a>, Cambridge, UK. <i>Stochastic Primal-Dual Hybrid Gradient Method</i></td></tr>
-
-<tr><td></td><td> # <a href="https://spie.org/OPO/conferencedetails/wavelets-sparsity">SPIE Optics+Photonics: Wavelets and Sparsity XVII</a>, San Diego, USA. <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/20170809_Ehrhardt.pdf">preprint</a>] [<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10394/103941O/Faster-PET-reconstruction-with-a-stochastic-primal-dual-hybrid-gradient/10.1117/12.2272946.full?SSO=1">pdf</a>] [<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10394.toc?SSO=1#OptimizationandSparseInverseProblemsI">video</a>] </td></tr>
-
-<tr><td></td><td> # <a href="https://numericalanalysisconference.org.uk/">27th Biennial NA Conference in Strathclyde</a>, Glasgow, UK. <i>Accelerated Stochastic PDHG by Non-Uniform Sampling</i> </td></tr>
-
-<tr><td></td><td><a href="http://aip2017.csp.escience.cn/dct/page/1">Applied Inverse Problems</a>, Hangzhou, China. # <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i>, <i>Accelerated Stochastic PDHG by Non-Uniform Sampling</i> </td></tr>
-
-<tr><td></td><td> # <a href="http://ins.sjtu.edu.cn/conferences/2017/05/26/mini-workshop-on-bayesian-inverse-problems-and-imaging/1087">Mini Workshop on Bayesian Inverse Problems and Imaging</a>, Jiao Tong University, Shanghai, China. <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i> </td></tr>
-
-<tr><td></td><td><a href="http://www.surrey.ac.uk/bamc">British Applied Mathematics Colloquium</a>, Guildford, UK. <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i> </td></tr>
-
-<tr><td></td><td> # <a href="http://www.ricam.oeaw.ac.at/events/conferences/radon100">100 Years of the Radon Transform</a>, Linz, Austria. <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i>, <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> </td></tr>
-
-<tr><td></td><td> # <a href="http://www.ccimi.maths.cam.ac.uk/events/cambridge-heriot-watt-interdisciplinary-data-science-workshop-mathematical-imaging-partially-unknown-models/">Mathematical imaging with partially unknown models</a>, Cambridge, UK. <i>Discrete Gradients for Non-Smooth Bi-Level Learning</i> </td></tr>
+<!--
+<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Upcoming Conferences and Workshops</div>
+  <div><table class="w3-table">
+	<tr><td>2018</td><td> # <a href="https://ismp2018.sciencesconf.org/">ISMP 2018: International Symposium on Mathematical Programming</a>, Bordeaux, France. <i>Stochastic PDHG with Arbitrary Sampling and Applications to Medical Imaging</i></td></tr>
+  </table></div><div class="w3-container"></div>
+-->
 
 
-<tr><td>2016</td><td> # Numerical Analysis Seminar, KTH Stockholm, Sweden. <i>Combined Image Reconstruction for Combined Medical Imaging</i> </td></tr>
+<div class="w3-padding w3-container"># denotes invited presentations</div>
 
-<tr><td></td><td> # <a href="https://www.siam.org/meetings/is16">SIAM Conference on Imaging Science</a>, Albuquerque, USA. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="https://www.pathlms.com/siam/courses/2426/sections/3325/video_presentations/26555">video</a>]</td></tr>
+<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Oral Presentations at Conferences, Workshops and Seminars</div>
+  <div><table class="w3-table">
+	<tr><th>2018</th><td> # <a href="https://ismp2018.sciencesconf.org/">ISMP 2018: International Symposium on Mathematical Programming</a>, Bordeaux, France. <i>Stochastic PDHG with Arbitrary Sampling and Applications to Medical Imaging</i></td></tr>
 
-<tr><td></td><td> # <a href="http://www.turing-gateway.cam.ac.uk/dmb_mar2016.shtml">Big Data, Multimodality & Dynamic Models in Biomedical Imaging</a>, Cambridge, UK. <i>Combined Image Reconstruction for Combined PET-MR Imaging</i> [<a href="https://www.newton.ac.uk/seminar/20160309140014301">video</a>]</td></tr>
+	<tr><th></th><td><a href="https://www.siam-is18.dm.unibo.it/">SIAM Conference on Imaging Science</a>, Bologna, Italy. <i>Faster PET-MR Image Reconstruction by Stochastic Optimization</i> </td></tr>
 
-<tr><td></td><td> # Edinburgh Research Group in Optimization, Edinburgh, UK. <i>Optimization based Image Reconstruction in Medical Imaging: Models and Challenges</i></td></tr>
+	<tr><th></th><td> # Applied and Interdisciplenary Mathematics Seminar, University of Bath, UK. <i>A Randomized Algorithm for Convex Optimization and Medical Imaging Applications</i> </td></tr>
 
-<tr><td></td><td> # UCL PET/MR Symposium, London, UK. <i>Combined Image Reconstruction for Combined PET-MR Imaging</i> </td></tr>
+	<tr><th></th><td> # Scientific Computing Seminar, DTU, Denmark. <i>A Randomized Algorithm for Convex Optimization and Medical Imaging Applications</i> </td></tr>
 
-
-<tr><td>2015</td><td><a href="https://www.aip2015.fips.fi/index.php">Applied Inverse Problems Conference</a>, Helsinki, Finland. <i>Joint Reconstruction of PET-MRI by Exploiting Structural Similarity</i> </td></tr>
-
-<tr><td></td><td> # Data Processing Challenges in PET-MR, London, UK. <i>Joint Reconstruction of Simultaneously Acquired PET-MRI by Exploiting Structural Similarity</i> </td></tr>	
-
-<tr><td></td><td> # <a href="http://www.bmc-bamc.org.uk/">The 4th Joint British Mathematical Colloquium and British Applied Mathematics Colloquium</a>, University of Cambridge, UK. <i>Joint Reconstruction of Simultaneously Acquired PET-MRI by Structural Similarity</i> </td></tr>
+	<tr><th></th><td> # <a href="https://obd.kaust.edu.sa/pages/ConfernceHome.aspx">Optimization and Big Data</a>, KAUST, Saudi Arabia. <i>Stochastic PDHG with Non-Uniform Sampling and Applications to Medical Imaging</i> </td></tr>
 
 
-<tr><td>2014</td><td> # UCL Centre for Medical Image Computing Seminar, London, UK. <i>Joint Reconstruction of PET-MRI by Exploiting Structural Similarity</i></td></tr>
+	<tr><th>2017</th><td> # Mathemematics and Applications Seminar, University of Sussex, UK. <i>Stochastic Optimization for Non-Smooth Imaging Applications</i> </td></tr>
 
-<tr><td></td><td> <a href="http://nssmic2014.npss-confs.org/">IEEE Nuclear Science Symposium & Medical Imaging Conference</a>, Seattle, USA. <i>Joint Reconstruction of PET-MRI by Parallel Level Sets</i> <b>(best student paper finalist)</b> </td></tr>
+	<tr><th></th><td><a href="http://www.heidelberg-laureate-forum.org/">5th Heidelberg Laureate Forum</a>, Heidelberg, Germany. <i>Stable Architectures for Deep Neural Networks</i> </td></tr>
 
-<tr><td></td><td> # STIR User Meeting at IEEE NSS/MIC, Seattle, USA. <i>STIR in MATLAB: More tools for Emission Tomography</i></td></tr>
+	<tr><th></th><td><a href="https://www.turing-gateway.cam.ac.uk/event/tgmw47">IMA Conference on Inverse Problems from Theory to Application</a>, Cambridge, UK. <i>Stochastic Primal-Dual Hybrid Gradient Method</i></td></tr>
 
-<tr><td></td><td> # UCL Institute for Nuclear Medicine Seminar, London, UK. <i>Joint reconstruction of PET-MRI by Parallel Level Sets</i> </td></tr>  
+	<tr><th></th><td> # <a href="https://spie.org/OPO/conferencedetails/wavelets-sparsity">SPIE Optics+Photonics: Wavelets and Sparsity XVII</a>, San Diego, USA. <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i> [<a href="data/20170809_Ehrhardt.pdf">preprint</a>] [<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10394/103941O/Faster-PET-reconstruction-with-a-stochastic-primal-dual-hybrid-gradient/10.1117/12.2272946.full?SSO=1">pdf</a>] [<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10394.toc?SSO=1#OptimizationandSparseInverseProblemsI">video</a>] </td></tr>
 
-<tr><td></td><td> # Oberseminar Angewandte Mathematik / Seminar AG Imaging, Westfaelische Wilhelms-Universitaet Muenster, Germany. <i>Joint Reconstruction of PET-MRI by Exploiting Structural Similarity</i> [<a href="http://wwwmath.uni-muenster.de/HotNews/show_artikel.php?id=4846&brettid=53">abstract</a>]</td></tr>
+	<tr><th></th><td> # <a href="https://numericalanalysisconference.org.uk/">27th Biennial NA Conference in Strathclyde</a>, Glasgow, UK. <i>Accelerated Stochastic PDHG by Non-Uniform Sampling</i> </td></tr>
 
-<tr><td></td><td> Imaging with Modulated/Incomplete Data, Graz, Austria. <i>Correct A Priori Information Modelling for Sparse MRI Reconstruction</i> [<a href="http://math.uni-graz.at/mobis/imaging14/abstracts/M_Ehrhardt.pdf">abstract (<1MB)</a>]</td></tr>
+	<tr><th></th><td><a href="http://aip2017.csp.escience.cn/dct/page/1">Applied Inverse Problems</a>, Hangzhou, China. # <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i>, <i>Accelerated Stochastic PDHG by Non-Uniform Sampling</i> </td></tr>
 
-<tr><td></td><td> <a href="http://www.ipms-conference.org/">Inverse Problems: Modelling and Simulation</a>, Fethiye, Turkey. <i>Joint Reconstruction of PET-MRI by Parallel Level Sets</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/2014_05_Abstract_IPMS2014_Ehrhardt.pdf">abstract (<1MB)</a>]</td></tr>
+	<tr><th></th><td> # <a href="http://ins.sjtu.edu.cn/conferences/2017/05/26/mini-workshop-on-bayesian-inverse-problems-and-imaging/1087">Mini Workshop on Bayesian Inverse Problems and Imaging</a>, Jiao Tong University, Shanghai, China. <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i> </td></tr>
 
-<tr><td></td><td> <a href="http://www.math.hkbu.edu.hk/SIAM-IS14/">SIAM Conference on Imaging Science</a>, Hong Kong Baptist University, Hong Kong. <i>Parallel Level Set Prior for Joint PET/MRI Reconstruction</i> </td></tr>
+	<tr><th></th><td><a href="http://www.surrey.ac.uk/bamc">British Applied Mathematics Colloquium</a>, Guildford, UK. <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i> </td></tr>
 
+	<tr><th></th><td> # <a href="http://www.ricam.oeaw.ac.at/events/conferences/radon100">100 Years of the Radon Transform</a>, Linz, Austria. <i>Faster PET Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</i>, <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> </td></tr>
 
-<tr><td>2013</td><td>Inverse Days, Inari, Finland. <i>Multi-Modality Image Reconstruction with Parallel Level Sets</i> </td></tr>
-
-<tr><td></td><td>Image Reconstruction in Emission Tomography and Hybrid Imaging, University College London, UK. <i>Joint Reconstruction - Exploiting Similar Structures in Multi-Modal Imaging.</i> </td></tr>
-
-</table>
+	<tr><th></th><td> # <a href="http://www.ccimi.maths.cam.ac.uk/events/cambridge-heriot-watt-interdisciplinary-data-science-workshop-mathematical-imaging-partially-unknown-models/">Mathematical imaging with partially unknown models</a>, Cambridge, UK. <i>Discrete Gradients for Non-Smooth Bi-Level Learning</i> </td></tr>
 
 
-<div class='text-subheading'>Poster Presentations</div>
-<table class='list'>
-<tr><td>2017</td><td><a href="https://www.newton.ac.uk/event/vmvw02">Generative Models, Parameter Learning and Sparsity</a>, Cambridge, UK. <i>Stochastic Primal-Dual Hybrid Gradient Algorithm</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/20170830_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
-<tr><td></td><td><a href="http://www.turing-gateway.cam.ac.uk/event/tgmw48">Developments in Healthcare Imaging - Connecting with Industry</a>, Cambridge, UK. <i>Stochastic Primal-Dual Hybrid Gradient Algorithm</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/20170830_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
-<tr><td></td><td><a href="https://www.newton.ac.uk/event/vmvw01">Variational Methods, New Optimisation Techniques and New Fast Numerical Algorithm</a>, Cambridge, UK. <i>Stochastic Primal-Dual Hybrid Gradient Algorithm</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/20170830_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+	<tr><th>2016</th><td> # Numerical Analysis Seminar, KTH Stockholm, Sweden. <i>Combined Image Reconstruction for Combined Medical Imaging</i> </td></tr>
 
-<tr><td>2016</td><td> <a href="http://www.turing-gateway.cam.ac.uk/sci_mar2016.shtml">EPSRC Centre for Mathematical & Statistical Analysis of Multimodal Clinical Imaging Launch Event</a>, Cambridge, UK. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
-<tr><td></td><td> <a href="http://www.turing-gateway.cam.ac.uk/mbd_apr2016.shtml">University of Cambridge Mathematics and Big Data Showcase</a>, Cambridge, UK. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
-<tr><td></td><td> <a href="http://www.turing-gateway.cam.ac.uk/cci_may2016.shtml">Cantab Capital Institute for the Mathematics of Information - Launch Event</a>, Cambridge, UK. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
-<tr><td></td><td><a href="http://www.damtp.cam.ac.uk/user/cbs31/LMS_Inverse_Day_Nottingham/Home.html">LMS Inverse Day: Big Inverse Problems</a>, Nottingham, UK. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
-<tr><td></td><td> <a href="http://www.sustain.bris.ac.uk/ws-hds/">High-dimensional Statistics, Inverse Problems and Convex Analysis</a>, London, UK. <i>Poster: Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+	<tr><th></th><td> # <a href="https://www.siam.org/meetings/is16">SIAM Conference on Imaging Science</a>, Albuquerque, USA. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="https://www.pathlms.com/siam/courses/2426/sections/3325/video_presentations/26555">video</a>]</td></tr>
 
-<tr><td>2014</td><td> <a href="http://www.newton.ac.uk/programmes/INV/invw07.shtml">LMS Inverse Day: Sparse Regularisation for Inverse Problems</a>, Isaac Newton Institute for Mathematical Sciences, Cambridge, UK. <i>Joint Reconstruction of PET/MRI by Parallel Level Sets</i> <b>(best poster award)</b> [<a href="https://www.newton.ac.uk/files/poster/189942.pdf">poster (1MB)</a>]</td></tr>
+	<tr><th></th><td> # <a href="http://www.turing-gateway.cam.ac.uk/dmb_mar2016.shtml">Big Data, Multimodality & Dynamic Models in Biomedical Imaging</a>, Cambridge, UK. <i>Combined Image Reconstruction for Combined PET-MR Imaging</i> [<a href="https://www.newton.ac.uk/seminar/20160309140014301">video</a>]</td></tr>
 
-<tr><td>2013</td><td> <a href="http://open.nims.re.kr/AIPC2013/web/Home.html">Applied Inverse Problem Conference</a>, KAIST, Daejeon, South Korea. <i>Joint Reconstruction with Parallel Level Sets</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/2013-06-25_Ehrhardt_AIP2013.pdf">poster (2MB)</a>]</td></tr>
+	<tr><th></th><td> # Edinburgh Research Group in Optimization, Edinburgh, UK. <i>Optimization based Image Reconstruction in Medical Imaging: Models and Challenges</i></td></tr>
 
-</table>
-</div></td>
+	<tr><th></th><td> # UCL PET/MR Symposium, London, UK. <i>Combined Image Reconstruction for Combined PET-MR Imaging</i> </td></tr>
+
+	
+	<tr><th>2015</th><td><a href="https://www.aip2015.fips.fi/index.php">Applied Inverse Problems Conference</a>, Helsinki, Finland. <i>Joint Reconstruction of PET-MRI by Exploiting Structural Similarity</i> </td></tr>
+
+	<tr><th></th><td> # Data Processing Challenges in PET-MR, London, UK. <i>Joint Reconstruction of Simultaneously Acquired PET-MRI by Exploiting Structural Similarity</i> </td></tr>	
+
+	<tr><th></th><td> # <a href="http://www.bmc-bamc.org.uk/">The 4th Joint British Mathematical Colloquium and British Applied Mathematics Colloquium</a>, University of Cambridge, UK. <i>Joint Reconstruction of Simultaneously Acquired PET-MRI by Structural Similarity</i> </td></tr>
+
+
+	<tr><th>2014</th><td> # UCL Centre for Medical Image Computing Seminar, London, UK. <i>Joint Reconstruction of PET-MRI by Exploiting Structural Similarity</i></td></tr>
+
+	<tr><th></th><td> <a href="http://nssmic2014.npss-confs.org/">IEEE Nuclear Science Symposium & Medical Imaging Conference</a>, Seattle, USA. <i>Joint Reconstruction of PET-MRI by Parallel Level Sets</i> <b>(best student paper finalist)</b> </td></tr>
+
+	<tr><th></th><td> # STIR User Meeting at IEEE NSS/MIC, Seattle, USA. <i>STIR in MATLAB: More tools for Emission Tomography</i></td></tr>
+
+	<tr><th></th><td> # UCL Institute for Nuclear Medicine Seminar, London, UK. <i>Joint reconstruction of PET-MRI by Parallel Level Sets</i> </td></tr>  
+
+	<tr><th></th><td> # Oberseminar Angewandte Mathematik / Seminar AG Imaging, Westfaelische Wilhelms-Universitaet Muenster, Germany. <i>Joint Reconstruction of PET-MRI by Exploiting Structural Similarity</i> [<a href="http://wwwmath.uni-muenster.de/HotNews/show_artikel.php?id=4846&brettid=53">abstract</a>]</td></tr>
+
+	<tr><th></th><td> Imaging with Modulated/Incomplete Data, Graz, Austria. <i>Correct A Priori Information Modelling for Sparse MRI Reconstruction</i> [<a href="http://math.uni-graz.at/mobis/imaging14/abstracts/M_Ehrhardt.pdf">abstract (<1MB)</a>]</td></tr>
+
+	<tr><th></th><td> <a href="http://www.ipms-conference.org/">Inverse Problems: Modelling and Simulation</a>, Fethiye, Turkey. <i>Joint Reconstruction of PET-MRI by Parallel Level Sets</i> [<a href="data/2014_05_Abstract_IPMS2014_Ehrhardt.pdf">abstract (<1MB)</a>]</td></tr>
+
+	<tr><th></th><td> <a href="http://www.math.hkbu.edu.hk/SIAM-IS14/">SIAM Conference on Imaging Science</a>, Hong Kong Baptist University, Hong Kong. <i>Parallel Level Set Prior for Joint PET/MRI Reconstruction</i> </td></tr>
+
+
+	<tr><th>2013</th><td>Inverse Days, Inari, Finland. <i>Multi-Modality Image Reconstruction with Parallel Level Sets</i> </td></tr>
+
+	<tr><th></th><td>Image Reconstruction in Emission Tomography and Hybrid Imaging, University College London, UK. <i>Joint Reconstruction - Exploiting Similar Structures in Multi-Modal Imaging.</i> </td></tr>
+
+  </table></div><div class="w3-container"></div>
+
+
+
+<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Poster Presentations</div>
+  <div><table class="w3-table">
+
+	<tr><th>2017</th><td><a href="https://www.newton.ac.uk/event/vmvw02">Generative Models, Parameter Learning and Sparsity</a>, Cambridge, UK. <i>Stochastic Primal-Dual Hybrid Gradient Algorithm</i> [<a href="data/20170830_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+	<tr><th></th><td><a href="http://www.turing-gateway.cam.ac.uk/event/tgmw48">Developments in Healthcare Imaging - Connecting with Industry</a>, Cambridge, UK. <i>Stochastic Primal-Dual Hybrid Gradient Algorithm</i> [<a href="data/20170830_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+	<tr><th></th><td><a href="https://www.newton.ac.uk/event/vmvw01">Variational Methods, New Optimisation Techniques and New Fast Numerical Algorithm</a>, Cambridge, UK. <i>Stochastic Primal-Dual Hybrid Gradient Algorithm</i> [<a href="http://store.maths.cam.ac.uk/DAMTP/me404/data_for_home_public_html/20170830_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+	<tr><th>2016</th><td> <a href="http://www.turing-gateway.cam.ac.uk/sci_mar2016.shtml">EPSRC Centre for Mathematical & Statistical Analysis of Multimodal Clinical Imaging Launch Event</a>, Cambridge, UK. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="data/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+	<tr><th></th><td> <a href="http://www.turing-gateway.cam.ac.uk/mbd_apr2016.shtml">University of Cambridge Mathematics and Big Data Showcase</a>, Cambridge, UK. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="data/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+	<tr><th></th><td> <a href="http://www.turing-gateway.cam.ac.uk/cci_may2016.shtml">Cantab Capital Institute for the Mathematics of Information - Launch Event</a>, Cambridge, UK. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="data/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+	<tr><th></th><td><a href="http://www.damtp.cam.ac.uk/user/cbs31/LMS_Inverse_Day_Nottingham/Home.html">LMS Inverse Day: Big Inverse Problems</a>, Nottingham, UK. <i>Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="data/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+	<tr><th></th><td> <a href="http://www.sustain.bris.ac.uk/ws-hds/">High-dimensional Statistics, Inverse Problems and Convex Analysis</a>, London, UK. <i>Poster: Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</i> [<a href="data/2016-03-04_Ehrhardt.pdf">poster (2 MB)</a>]</td></tr>
+
+	<tr><th>2014</th><td> <a href="http://www.newton.ac.uk/programmes/INV/invw07.shtml">LMS Inverse Day: Sparse Regularisation for Inverse Problems</a>, Isaac Newton Institute for Mathematical Sciences, Cambridge, UK. <i>Joint Reconstruction of PET/MRI by Parallel Level Sets</i> <b>(best poster award)</b> [<a href="https://www.newton.ac.uk/files/poster/189942.pdf">poster (1MB)</a>]</td></tr>
+
+	<tr><th>2013</th><td> <a href="http://open.nims.re.kr/AIPC2013/web/Home.html">Applied Inverse Problem Conference</a>, KAIST, Daejeon, South Korea. <i>Joint Reconstruction with Parallel Level Sets</i> [<a href="data/2013-06-25_Ehrhardt_AIP2013.pdf">poster (2MB)</a>]</td></tr>
+
+  </table></div><div class="w3-container"></div>
+
+
+
+<!-- Footer -->
+<div class="w3-padding-16 w3-light-grey">
+	<div class="w3-padding" style="width:60%; margin:auto">
+		<div class="w3-container w3-cell" style="width:20%"><a href="http://uk.linkedin.com/pub/matthias-j-ehrhardt/89/193/b61/"><div class="bottom-banner linkedin"> </div></a></div>
+
+		<div class="w3-container w3-cell" style="width:20%"><a href="https://www.researchgate.net/profile/Matthias_Ehrhardt2?ev=hdr_xprf"><div class="bottom-banner researchgate"></div></a></div>
+
+		<div class="w3-container w3-cell" style="width:20%"><a href="http://orcid.org/0000-0001-8523-353X"><div class="bottom-banner orcid"></div></a></div>
+
+		<div class="w3-container w3-cell" style="width:20%"><a href="https://github.com/mehrhardt"><div class="bottom-banner github"></div></a></div>
+
+		<div class="w3-container w3-cell" style="width:20%"><a href="https://scholar.google.co.uk/citations?user=dkbrSccAAAAJ&hl=en"><div class="bottom-banner google"> </div></a></div>
+	</div>
+</div>
+
+<div class="w3-black w3-center w3-padding-24">&copy; 2014-2018 Matthias J. Ehrhardt - m.ehrhardt@bath.ac.uk - last updated: Sep 2018</div>
+
+<!-- End page content -->
+</div>
+
+<script>
+var acc = document.getElementsByClassName("my-accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display !== "none") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
+
