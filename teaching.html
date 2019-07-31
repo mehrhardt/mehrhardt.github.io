@@ -43,29 +43,57 @@ div.google:hover{background-position: -80px 0px;}
 div.github{background-position: -40px -120px; width: 40px}
 div.github:hover{background-position: 0px -120px;}
 
+
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    
+h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0em;
+}
+    
+h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 0em;
+}
+    
+.smallscreen {display: none}
+.largescreen {display: block}
+
+@media screen and (max-width: 600px) {
+    .smallscreen {display: block}
+    .largescreen {display: none}
+}
+    
 </style>
 
 <body>
 
 <!-- Sidebar/menu -->
-<div class="w3-top w3-black">
-  <div class="w3-padding w3-wide w3-xlarge" style="margin-top: 20px"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
-  <div class="w3-left-align">
-    <a href="index.html" class="w3-button w3-hover-white">Home</a>
-    <a href="cv.html" class="w3-button w3-hover-white">CV</a>
-    <a href="research.html" class="w3-button w3-hover-white">Research</a>
-    <a href="teaching.html" class="w3-button w3-hover-white">Teaching</a>
-    <a href="software.html" class="w3-button w3-hover-white">Software</a>
+<div class="w3-top w3-black" style="height: 90px">
+  <div class="w3-padding w3-bold w3-xlarge"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
+  <div class="w3-left-align w3-display-bottomleft w3-bar largescreen">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white">Teaching</a>
+    <a href="software.html" class="smallscreen w3-bar-item w3-btn w3-hover-white">Software</a>
+  </div>
+    
+  <div class="w3-left-align w3-display-bottomleft w3-bar smallscreen">
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white" style="margin-left: 12px, padding: 8px 4px">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white" style="padding: 8px 12px">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white" style="padding: 8px 12px">Teaching</a>
+    <a href="software.html" class="smallscreen w3-bar-item w3-btn w3-hover-white" style="padding: 8px 12px">Software</a>
   </div>
 </div>
 
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main">
-<div style="margin-top:140px"></div>
-
+<div style="margin-top:90px"></div>
 <h1 class="w3-padding">Teaching</h1>
 
 	<div class="w3-row">
@@ -73,20 +101,19 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 
-<div class="w3-padding w3-xlarge w3-left">University of Cambridge, UK</div>
-  <div><table class="w3-table">
+<h2 class="w3-padding">University of Cambridge, UK</h2>
+<table class="w3-table">
 	<tr><th style="width:80px">2018</th><td> <a href="http://www.damtp.cam.ac.uk/research/cia/teaching/201718lentinvprob.html">Inverse Problems</a> (Mathematical Tripos Part III), Lecturer [<a href="data/201706_course_invprob.pdf">course description</a>][<a href="data/201803_lecture_notes_invprob.pdf">lecture notes</a>]</td></tr> 
 
 	<tr><th>2016</th><td> <a href="http://www.damtp.cam.ac.uk/research/cia/teaching/2016inverseproblems.html">Inverse Problems in Imaging</a> (Mathematical Tripos Part III), Lecturer [<a href="data/201611_lecture_notes_invprob.pdf">lecture notes</a>]</td></tr> 
 
-	<tr><th></th><td> <a href="https://www.maths.ox.ac.uk/events/conferences/essam-modelling-analysis-and-simulation-crime-and-image-processing">European Summer School in Modelling, Analysis and Simulation Crime and Image Processing</a>, Group Supervisor [<a href="data/2016_Oxford_MRI_code_and_data.zip">download MATLAB demo (20 MB)</a>]</td></tr> 
-
-  </table></div><div class="w3-container"></div>
+	<tr><th></th><td> <a href="https://www.maths.ox.ac.uk/events/conferences/essam-modelling-analysis-and-simulation-crime-and-image-processing">European Summer School in Modelling, Analysis and Simulation Crime and Image Processing</a>, Group Supervisor [<a href="data/2016_Oxford_MRI_code_and_data.zip">download MATLAB demo (20 MB)</a>]</td></tr>
+</table>
 				
 
 
-<div class="w3-padding w3-xlarge w3-left">University College London, UK</div>
-  <div><table class="w3-table">
+<h2 class="w3-padding">University College London, UK</h2>
+<table class="w3-table">
 	<tr><th style="width:80px">2015</th><td> UCL Medical Image Computing Summer School, Group Supervisor</td></tr> 
 
 	<tr><th>2014</th><td> Inverse Problems in Imaging, Teaching Assistant</td></tr> 
@@ -98,16 +125,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	<tr><th></th><td> Writing Scientific Papers with LaTeX, Teaching Assistant</td></tr> 
 
 	<tr><th></th><td> Inverse Problems in Imaging, Teaching Assistant</td></tr> 
-
-  </table></div><div class="w3-container"></div>
-
+</table>
 
 
-<div class="w3-padding w3-xlarge w3-left">University of Bremen, Germany</div>
-  <div><table class="w3-table">
+
+<h2 class="w3-padding">University of Bremen, Germany</h2>
+<table class="w3-table">
 	<tr><th style="width:80px">2010</th><td> Functional Analysis, Teaching Assistant</td></tr> 
-
-  </table></div><div class="w3-container"></div>
+</table>
 
 		</div>
 

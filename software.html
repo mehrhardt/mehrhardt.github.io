@@ -46,30 +46,58 @@ div.github:hover{background-position: 0px -120px;}
 
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    
+h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0em;
+}
+    
+h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 0em;
+}
+    
+.smallscreen {display: none}
+.largescreen {display: block}
+
+@media screen and (max-width: 600px) {
+    .smallscreen {display: block}
+    .largescreen {display: none}
+}
+    
 </style>
 
 <body>
 
 <!-- Sidebar/menu -->
-<div class="w3-top w3-black">
-  <div class="w3-padding w3-wide w3-xlarge" style="margin-top: 20px"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
-  <div class="w3-left-align">
-    <a href="index.html" class="w3-button w3-hover-white">Home</a>
-    <a href="cv.html" class="w3-button w3-hover-white">CV</a>
-    <a href="research.html" class="w3-button w3-hover-white">Research</a>
-    <a href="teaching.html" class="w3-button w3-hover-white">Teaching</a>
-    <a href="software.html" class="w3-button w3-hover-white">Software</a>
+<div class="w3-top w3-black" style="height: 90px">
+  <div class="w3-padding w3-bold w3-xlarge"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
+  <div class="w3-left-align w3-display-bottomleft w3-bar largescreen">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white">Teaching</a>
+    <a href="software.html" class="smallscreen w3-bar-item w3-btn w3-hover-white">Software</a>
+  </div>
+    
+  <div class="w3-left-align w3-display-bottomleft w3-bar smallscreen">
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white" style="margin-left: 12px, padding: 8px 4px">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white" style="padding: 8px 12px">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white" style="padding: 8px 12px">Teaching</a>
+    <a href="software.html" class="smallscreen w3-bar-item w3-btn w3-hover-white" style="padding: 8px 12px">Software</a>
   </div>
 </div>
 
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main">
-<div style="margin-top:140px"></div>
+<div style="margin-top:90px"></div>
 
 <h1 class="w3-padding">Software</h1>
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Reproducible Research </div>
+<h2 class="w3-padding w3-left w3-button my-accordion">Reproducible Research </h2>
 	<div class="w3-row-padding">
 		<div class="w3-col w3-justify m8 l10">
 This page is intended to give access to the software of my published articles. Please feel free to download and make use of it. If you find bugs in our code please let me know: <a href="mailto:m.ehrhardt@bath.ac.uk">m.ehrhardt@bath.ac.uk</a>. 
@@ -80,11 +108,11 @@ This page is intended to give access to the software of my published articles. P
 		<div class="w3-col m4 l2">
 <a href="http://reproducibleresearch.net"><img src="images/software/Reproducible_Research_149x62.jpg" width="200px"></a>
 		</div>
-	</div><div class="w3-container"></div>
+	</div>
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Quick links to all software </div>
+<h2 class="w3-padding w3-left w3-button my-accordion">Quick links to all software </h2>
 	<div class="w3-padding w3-row-padding">
-	<ul style='margin-left: 30pt'>
+	<ul style='margin-top:0pt'>
 		<li><a href="#MRIMRI">Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</a></li>
 		<li><a href="#PETMRI">Joint reconstruction of PET-MRI by exploiting structural similarity</a></li>	
 		<li><a href="#RGB">Vector-Valued Image Processing by Parallel Level Sets</a></li>
@@ -95,8 +123,7 @@ This page is intended to give access to the software of my published articles. P
 	</div>
 
 <!--- MRIMRI --->
-<div class="my-anchor" id="MRIMRI"></div><div class="w3-padding w3-xlarge w3-left w3-button my-accordion"> Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</div>
-	<div>
+<div class="my-anchor" id="MRIMRI"></div><h1 class="w3-padding w3-left w3-button my-accordion"> Multi-Contrast MRI Reconstruction with Structure-Guided Total Variation</h1>
 	<div class="w3-row-padding">
 		<div class="w3-col w3-justify m5 l5">
 <a href="http://www.damtp.cam.ac.uk/user/me404/"><b>M. J. Ehrhardt</b></a>,
@@ -121,12 +148,11 @@ This page is intended to give access to the software of my published articles. P
 
 	<div style="width:600px; margin:auto"><img src="images/software/SIAM_MRIMRI/MRIMRI_results.png" width="100%"></div> <br> <b>Example Result:</b> Reconstructions with different a priori knowledge. The reconstruction quality improves visually significantly from left to right.
 	</div>
-	</div><div class="w3-container"></div>
 
 
 
 <!--- PETMRI --->
-<div class="my-anchor" id="PETMRI"></div><div class="w3-padding w3-xlarge w3-left w3-button my-accordion"> Joint Reconstruction of PET-MRI by Exploiting Structural Similarity</div>
+<div class="my-anchor" id="PETMRI"></div><h1 class="w3-padding w3-left w3-button my-accordion">Joint Reconstruction of PET-MRI by Exploiting Structural Similarity</h1>
 	<div class="w3-row-padding">
 		<div class="w3-threequarter w3-justify">
 <a href="http://www.damtp.cam.ac.uk/user/me404/"><b>M. J. Ehrhardt</b></a>,
@@ -166,13 +192,12 @@ This page is intended to give access to the software of my published articles. P
 		</div>
 <b>Example Result:</b> Reconstructions of simulated PET and undersampled MRI are shown. Separate reconstructions (left) show low resolution in PET and ghosting in MRI. Joint reconstruction (right) results in better defined PET images and removes ghosting artefacts in MRI.
 	</div>
-
-	</div><div class="w3-container"></div>
+	</div>
 									
 					
 
 <!--- RGB --->
-<div class="my-anchor" id="RGB"></div><div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Vector-Valued Image Processing by Parallel Level Sets</div>
+<div class="my-anchor" id="RGB"></div><h1 class="w3-padding w3-left w3-button my-accordion">Vector-Valued Image Processing by Parallel Level Sets</h1>
 	<div class="w3-row-padding">
 		<div class="w3-col w3-justify m8 l8">
 <a href="http://www.damtp.cam.ac.uk/user/me404/"><b>M. J. Ehrhardt</b></a>,
@@ -209,8 +234,7 @@ This page is intended to give access to the software of my published articles. P
 <p><b>Acknowledgements:</b> The <i>original images</i> are part of the training data set of the <a href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/" target='_blank'>Berkeley Segmentation Dataset</a>, [<a href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/BSDS300-images.tgz">download (21 MB)</a>, accessed March 2013]. The images have different names in the data base: leopard = 159029, lake = 176035, pyramid = 299091, bugs = 35008, wolf = 42078. The <i>noisy images</i> can be found on <a href="http://www.cs.utoronto.ca/~strider/Denoise/Benchmark/index.html" target='_blank'>Francisco J. Estrada's web page</a>, [<a href="http://www.cs.utoronto.ca/~strider/Denoise/Benchmark/Denoising_Benchmark.tgz">download (1 GB)</a>, accessed March 2013]. The images have different names on this page: leopard = 0072, lake = 0094, pyramid = 0194, bugs = 0213, wolf = 0246.<br> 
 We used the <i>Structural Similarity</i> as a figure of merit. To make use of it in the software please download the file ssim_index.m [<a href="https://ece.uwaterloo.ca/~z70wang/research/ssim/ssim_index.m">download (6 KB)</a>, accessed March 2013] available from the <a href="https://ece.uwaterloo.ca/~z70wang/research/ssim/">author's web page</a>.</p>
 		</div>
-
-	</div><div class="w3-container"></div>
+	</div>
 
 
  

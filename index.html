@@ -46,26 +46,54 @@ div.github:hover{background-position: 0px -120px;}
 
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    
+h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0em;
+}
+    
+h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 0em;
+}
+    
+.smallscreen {display: none}
+.largescreen {display: block}
+
+@media screen and (max-width: 600px) {
+    .smallscreen {display: block}
+    .largescreen {display: none}
+}
+    
 </style>
 
 <body>
 
 <!-- Sidebar/menu -->
-<div class="w3-top w3-black">
-  <div class="w3-padding w3-wide w3-xlarge" style="margin-top: 20px"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
-  <div class="w3-left-align">
-    <a href="index.html" class="w3-button w3-hover-white">Home</a>
-    <a href="cv.html" class="w3-button w3-hover-white">CV</a>
-    <a href="research.html" class="w3-button w3-hover-white">Research</a>
-    <a href="teaching.html" class="w3-button w3-hover-white">Teaching</a>
-    <a href="software.html" class="w3-button w3-hover-white">Software</a>
+<div class="w3-top w3-black" style="height: 90px">
+  <div class="w3-padding w3-bold w3-xlarge"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
+  <div class="w3-left-align w3-display-bottomleft w3-bar largescreen">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white">Teaching</a>
+    <a href="software.html" class="smallscreen w3-bar-item w3-btn w3-hover-white">Software</a>
+  </div>
+    
+  <div class="w3-left-align w3-display-bottomleft w3-bar smallscreen">
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white" style="margin-left: 12px, padding: 8px 4px">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white" style="padding: 8px 12px">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white" style="padding: 8px 12px">Teaching</a>
+    <a href="software.html" class="smallscreen w3-bar-item w3-btn w3-hover-white" style="padding: 8px 12px">Software</a>
   </div>
 </div>
 
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main">
-<div style="margin-top:140px"></div>
+<div style="margin-top:90px"></div>
 
 <h1 class="w3-padding">About me</h1>
 	<div class="w3-row-padding">
@@ -90,7 +118,7 @@ United Kingdom
 	</div>
     
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">News</div>
+<h1 class="w3-padding w3-xlarge w3-left w3-button my-accordion">News</h1>
   <div><table class="w3-table">
       
     <tr><th style="width:80px">07/2019</th><td>I am looking for outstanding candidates for a 3-year PostDoc position in Inverse Problems and Optimization, see <a href="https://www.bath.ac.uk/jobs/Vacancy.aspx?ref=CC6696R">link</a> for more information.</td></tr>  
@@ -121,10 +149,10 @@ Carola-Bibiane Schönlieb (all Cambridge, UK), Martin Benning (Queen Mary, Londo
 
 
 
-<div class="w3-padding w3-xlarge w3-left">News archive:</div>
+<h1 class="w3-padding w3-left">News archive:</h1>
 
     
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">2018</div>
+<h1 class="w3-padding w3-left w3-button my-accordion">2018</h1>
   <div style="display:none"><table class="w3-table">
     <tr><th>11/2018</th><td> Our paper on <a href="http://aimsciences.org/article/doi/10.3934/ipi.2019015">Incorporating Structural Prior Information and Sparsity into EIT using Parallel Level Sets</a> got accepted for <a href="http://aimsciences.org/journal/1930-8337">Inverse Problems and Imaging</a>. This is joint work with <a href="http://venda.uef.fi/inverse/FrontPage/People/Ville%20Kolehmainen">Ville Kolehmainen</a> (Finland) and <a href="http://cmic.cs.ucl.ac.uk/staff/simon_arridge/">Simon Arridge</a> (UK).</td></tr>
 
@@ -155,7 +183,7 @@ Carola-Bibiane Schönlieb (all Cambridge, UK), Martin Benning (Queen Mary, Londo
 </table></div>
     
     
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">2017</div>
+<h1 class="w3-padding w3-left w3-button my-accordion">2017</h1>
   <div style="display:none"><table class="w3-table">
 	<tr><th style="width:80px">12/2017</th><td> Our paper on <a href="http://ieeexplore.ieee.org/document/8239640/?arnumber=8239640&source=authoralert">Fast Quasi-Newton Algorithms for Penalized Reconstruction in Emission Tomography and Further Improvements via Preconditioning</a> has been accepted for publication in IEEE Transactions on Medical Imaging.</td></tr> 
 
@@ -177,7 +205,7 @@ Carola-Bibiane Schönlieb (all Cambridge, UK), Martin Benning (Queen Mary, Londo
   </table></div>
 
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">2016</div>
+<h1 class="w3-padding w3-left w3-button my-accordion">2016</h1>
   <div style="display:none"><table class="w3-table">
 
 	<tr><th style="width:80px">12/2016</th><td> Our preprint on <a href="https://arxiv.org/abs/1612.02506">Gradient descent in a generalised Bregman distance framework</a> is available on <a href="https://arxiv.org/abs/1612.02506">arXiv</a>.</td></tr> 
@@ -193,21 +221,21 @@ Carola-Bibiane Schönlieb (all Cambridge, UK), Martin Benning (Queen Mary, Londo
   </table></div><div class="w3-container"></div>
 
 
-<h2 class="w3-padding">PhD students</h2>
-    <ul>
+<h1 class="w3-padding">PhD students</h1>
+    <ul style="margin-top:0pt">
     <li><a href="https://www.maths.cam.ac.uk/postgrad/cca/people/fs436.html">Ferdia Sherry</a>, Cambridge (2016-, machine learning, imaging; co-supervisor with <a href="http://www.damtp.cam.ac.uk/user/cbs31/Home.html">Carola-Bibiane Schönlieb</a>)</li>
     <li><a href="http://www.bath.ac.uk/math-sci/postgraduate/samba/people-partners/students/index.html">Eric Baruch Gutiérrez Castillo</a>, Bath (2019-, optimisation; primary supervisor with <a href="http://people.bath.ac.uk/eas25/">Euan Spence</a>)</li>
     <li><a href="http://people.bath.ac.uk/magd21/">Margaret Duff</a>, Bath (2019-, machine learning, imaging; with <a href="http://cs.bath.ac.uk/~nc537/">Neill Campbell</a>)</li>
     </ul>   
 
-<h2 class="w3-padding">Visitors</h2>
-    <ul>
+<h1 class="w3-padding">Visitors</h1>
+    <ul style="margin-top:0pt">
     <li><a href="https://www.researchgate.net/profile/Evelyn_Cueva">Evelyn Cueva</a>, University of Chile, Santiago (11/2018-03/2019)</li>
     <li><a href="https://konstmish.github.io/">Konstantin Mishchenko</a>, KAUST, Saudi Arabia (06/2019)</li>
     </ul>   
     
-<h2 class="w3-padding">Useful Links</h2>
-    <ul>
+<h1 class="w3-padding">Useful Links</h1>
+    <ul style="margin-top:0pt">
     <li><a href="https://www.ccppetmr.ac.uk/">CCP PET-MR: SIRF</a></li>
     <li><a href="https://www.ccpi.ac.uk/CIL">CCPi Tomographic Imaging</a></li>
     <li><a href="https://github.com/pjmark/NiftyPET">NiftyPET</a></li>

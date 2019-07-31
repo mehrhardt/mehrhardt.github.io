@@ -46,32 +46,60 @@ div.github:hover{background-position: 0px -120px;}
 
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    
+h1 {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0em;
+}
+    
+h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 0em;
+}
+    
+.smallscreen {display: none}
+.largescreen {display: block}
+
+@media screen and (max-width: 600px) {
+    .smallscreen {display: block}
+    .largescreen {display: none}
+}
+    
 </style>
 
 <body>
 
 <!-- Sidebar/menu -->
-<div class="w3-top w3-black">
-  <div class="w3-padding w3-wide w3-xlarge" style="margin-top: 20px"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
-  <div class="w3-left-align">
-    <a href="index.html" class="w3-button w3-hover-white">Home</a>
-    <a href="cv.html" class="w3-button w3-hover-white">CV</a>
-    <a href="research.html" class="w3-button w3-hover-white">Research</a>
-    <a href="teaching.html" class="w3-button w3-hover-white">Teaching</a>
-    <a href="software.html" class="w3-button w3-hover-white">Software</a>
+<div class="w3-top w3-black" style="height: 90px">
+  <div class="w3-padding w3-bold w3-xlarge"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
+  <div class="w3-left-align w3-display-bottomleft w3-bar largescreen">
+    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white">Teaching</a>
+    <a href="software.html" class="smallscreen w3-bar-item w3-btn w3-hover-white">Software</a>
+  </div>
+    
+  <div class="w3-left-align w3-display-bottomleft w3-bar smallscreen">
+    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white" style="margin-left: 12px, padding: 8px 4px">CV</a>
+    <a href="research.html" class="w3-bar-item w3-button w3-hover-white" style="padding: 8px 12px">Research</a>
+    <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white" style="padding: 8px 12px">Teaching</a>
+    <a href="software.html" class="smallscreen w3-bar-item w3-btn w3-hover-white" style="padding: 8px 12px">Software</a>
   </div>
 </div>
 
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main">
-<div style="margin-top:140px"></div>
+<div style="margin-top:90px"></div>
 
 <h1 class="w3-padding">Research</h1>
 
 <div class="w3-padding w3-container">* denotes alphabetical order of authors</div>
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Peer-Reviewed Journal Publications</div>
+<h2 class="w3-padding w3-left w3-button my-accordion">Peer-Reviewed Journal Publications</h2>
   <div><table class="w3-table">
       
     <tr><th style="width:50px">2019</th><td>V. Corona, M. Benning, <b>M. J. Ehrhardt</b>, L. F. Gladden, R. Mair, A. Reci, A. J. Sederman, S. Reichelt, C.-B. Schönlieb, <a href="https://iopscience.iop.org/article/10.1088/1361-6420/ab0b77/meta">
@@ -104,7 +132,7 @@ Enhancing joint reconstruction and segmentation with non-convex Bregman iteratio
 
     
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Preprints</div>
+<h2 class="w3-padding w3-left w3-button my-accordion">Preprints</h2>
   <div><table class="w3-table">
 
     <tr><th style="width:50px">2019</th><td> F. Sherry, M. Benning, J. C. De los Reyes, M. J. Graves, G. Maierhofer, G. Williams, C.-B. Schönlieb, <b>M. J. Ehrhardt</b>, <a href="https://arxiv.org/abs/1906.08754">Learning the Sampling Pattern for MRI</a>, 
@@ -129,7 +157,7 @@ Enhancing joint reconstruction and segmentation with non-convex Bregman iteratio
 
 
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Peer-Reviewed Conference Proceedings</div>
+<h2 class="w3-padding w3-left w3-button my-accordion">Peer-Reviewed Conference Proceedings</h2>
   <div><table class="w3-table">
     <tr><th style="width:50px">2016</th><td>P. Markiewicz, <b>M. J. Ehrhardt</b>, N. Burgos, D. Atkinson, S. R. Arridge, B. F. Hutton, S. Ourselin, <a href="http://discovery.ucl.ac.uk/1508188/1/abstract.pdf">Unified acquisition modelling across PET imaging systems: unified scatter modelling</a>, IEEE Nuclear Science Symposium & Medical Imaging Conference [<a href="http://discovery.ucl.ac.uk/1508188/1/abstract.pdf">UCL discovery</a>]</td></tr>
 
@@ -143,7 +171,7 @@ Enhancing joint reconstruction and segmentation with non-convex Bregman iteratio
 
 
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Miscellaneous</div>
+<h2 class="w3-padding w3-left w3-button my-accordion">Miscellaneous</h2>
   <div><table class="w3-table">
 	<tr><th>2018</th><td> * L. Bungert, <b>M. J. Ehrhardt</b>, R. Reisenhofer, <a href="http://doi.org/10.1002/pamm.201800033">Robust Blind Image Fusion for Misaligned Hyperspectral Imaging Data</a>, Proceedings in Applied Mathematics & Mechanics, Vol. 18, e201800033 [<a href="http://doi.org/10.1002/pamm.201800033">print version</a>] </td></tr>
       
@@ -173,7 +201,7 @@ Reconstruction with a Stochastic Primal-Dual Hybrid Gradient Method</a>, Proceed
 
 <div class="w3-padding w3-container"># denotes invited presentations</div>
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Oral Presentations at Conferences, Workshops and Seminars</div>
+<h2 class="w3-padding w3-left w3-button my-accordion">Oral Presentations at Conferences, Workshops and Seminars</h2>
   <div><table class="w3-table">
     <tr><th>2019</th><td> # <a href="https://www.aip2019-grenoble.fr/">Applied Inverse Problems</a>, Grenoble, France. <i>Faster PET Reconstruction with Non-Smooth Priors by Randomization and Preconditioning</i> [<a href="data/slides/201907_AIP_Ehrhardt.pdf">slides (8MB)</a>] [<a href="https://arxiv.org/abs/1808.07150">preprint</a>]</td></tr>
 
@@ -261,7 +289,7 @@ inverse problems in imaging</i></td></tr>
 
 
 
-<div class="w3-padding w3-xlarge w3-left w3-button my-accordion">Poster Presentations</div>
+<h2 class="w3-padding w3-left w3-button my-accordion">Poster Presentations</h2>
   <div><table class="w3-table">
 
 	<tr><th>2019</th><td>Royal United Hospital, Bath, UK. <i>Mathematical Innovation for PET and MRI Imaging</i> [<a href="data/201902_Ehrhardt.pdf">poster (4 MB)</a>]</td></tr>
