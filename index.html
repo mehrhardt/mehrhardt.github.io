@@ -75,7 +75,8 @@ h2 {
 <div class="w3-top w3-black" style="height: 90px">
   <div class="w3-padding w3-bold w3-xlarge"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
   <div class="w3-left-align w3-display-bottomleft w3-bar largescreen">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="index.html#AboutMe" class="w3-bar-item w3-button w3-hover-white">About me</a>
+    <a href="index.html#Group" class="w3-bar-item w3-button w3-hover-white">Group</a>
     <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
     <a href="research.html" class="w3-bar-item w3-button w3-hover-white">Research</a>
     <a href="teaching.html" class="w3-bar-item w3-button w3-hover-white">Teaching</a>
@@ -96,10 +97,13 @@ h2 {
 <div class="w3-main">
 <div style="margin-top:90px"></div>
 
-<h1 class="w3-padding">About me</h1>
+
+<div class="w3-padding">
 <div class="w3-row-padding">
     
-<div class="w3-col w3-justify m10 l10">
+<div class="w3-col w3-justify m8 l8">
+<div class="my-anchor" id='AboutMe'></div>
+    <h1>About me</h1>
 I am a Leverhulme Early Career Fellow at the <a href="https://www.bath.ac.uk/departments/department-of-mathematical-sciences/">Department of Mathematical Sciences</a> and Prize Fellow at the <a href="http://www.bath.ac.uk/imi">Institute for Mathematical Innovation</a>, <a href="www.bath.ac.uk">University of Bath</a>. I belong to the <a href="https://bath-numerical-analysis.github.io/">Numerical Analysis</a> group in Bath and am a co-director of <a href="https://mathematics-and-algorithms-for-data.github.io">Centre for Mathematics and Algorithms for Data (MAD)</a>.
     
 <p>My research lies on the interface of optimization, inverse imaging problems and machine learning where I develop algorithms that are efficient enough for large-scale applications with proven convergence guarantees and robustness. My work bridges mathematical theory to various applications including medical imaging, material sciences, biology and geophysics.</p>
@@ -107,14 +111,28 @@ I am a Leverhulme Early Career Fellow at the <a href="https://www.bath.ac.uk/dep
 <p><b>Short Bio:</b> I was a post-doctoral research associate in the <a href="http://www.damtp.cam.ac.uk/research/cia/">Cambridge Image Analysis</a> group at the <a href="http://www.damtp.cam.ac.uk">Department for Applied Mathematics and Theoretical Physics</a>, <a href="http://www.cam.ac.uk/">University of Cambridge</a> from 2016-2018. Previously I have been with the <a href="http://www.engineering.ucl.ac.uk/cip/">Centre for Inverse Problems</a> and the <a href="http://cmic.cs.ucl.ac.uk/">Centre for Medical Image Computing</a> at the <a href="http://www.ucl.ac.uk/">University College London (UCL)</a>. I obtained my PhD from UCL in 2015 and my Diploma (Masters) from the University of Bremen, Germany in 2012.</p> 
 </div>
 
+    <div class="w3-col m2 l2">
+<div class="my-anchor" id='Contact'></div>
+<h1>Contact</h1>
+    <a href="mailto:m.ehrhardt@bath.ac.uk">m.ehrhardt@bath.ac.uk</a><br>
+<p>Office: 6 West, 1.08<br>
+Tel: 0044 1225 38 6194<br>
+University of Bath<br>
+Bath BA2 7JU<br>
+United Kingdom
+</p>
+    </div>
+    
 <div class="w3-col m2 l2 largescreen">
 <img src="images/Matthias_Ehrhardt_400x600.jpg" alt="Matthias J. Ehrhardt" style="width: 120pt">
 </div>
+    </div>
 
-</div>
     
-    
-<h1 class="w3-padding w3-xlarge w3-left w3-button my-accordion">News</h1>
+<hr>
+
+<div class="my-anchor" id='News'></div>    
+<h1 class="w3-xlarge w3-left w3-button my-accordion">News</h1>
   <div><table class="w3-table">
       
     <tr><th>11/2020</th><td>Our paper on <a href="https://arxiv.org/abs/2011.03151">Efficient Hyperparameter Tuning with Dynamic Accuracy Derivative-Free Optimization</a> got accepted to the <a href="https://neurips.cc/">NeurIPS 2020</a> workshop <a href="https://opt-ml.org/">OPT2020: Optimization for Machine Learning</a>. This is joint work with <a href="https://lindonroberts.github.io/">Lindon Roberts</a> (ANU, Australia).</td></tr> 
@@ -147,15 +165,12 @@ I am a Leverhulme Early Career Fellow at the <a href="https://www.bath.ac.uk/dep
             
     <tr><th>01/2020</th><td><a href="https://people.bath.ac.uk/mascjb/">Chris Budd (Bath, UK)</a> is turning 60 and we are celebrating this with a <a href="https://sites.google.com/view/chrisbudd60">workshop</a> on 4 March 2020 in Bath, see <a href="https://sites.google.com/view/chrisbudd60">here</a> for more details. This <a href="https://sites.google.com/view/chrisbudd60">event</a> is organized by <a href="http://www.damtp.cam.ac.uk/user/ai/Arieh_Iserles/Arieh_Iserles.html">Arie Iserles (Cambridge, UK)</a>, <a href="http://www.damtp.cam.ac.uk/user/cbs31/Home.html">Carola-Bibiane Schönlieb (Cambridge, UK)</a> and myself.</td></tr> 
 
-  </table></div>
-
-<div class="w3-container"></div>
-<div class="w3-rest"> </div>
+  </table>
 
 
 <h1 class="w3-padding w3-left">News archive:</h1>
 
-<h1 class="w3-padding w3-left w3-button my-accordion">2019</h1>
+<h1 class="w3-left w3-button my-accordion">2019</h1>
   <div style="display:none"><table class="w3-table">
 
     <tr><th>12/2019</th><td>New paper out on <a href="https://www.sciencedirect.com/science/article/pii/S0010465519303984">SIRF: Synergistic Image Reconstruction Framework</a> to be published in Computer Physics Communication. This is joint work with many people from all around the work lead by <a href="https://iris.ucl.ac.uk/iris/browse/profile?upi=KTHIE60">Kris Thielemans (UCL, UK)</a>.</td></tr>       
@@ -195,7 +210,7 @@ I am a Leverhulme Early Career Fellow at the <a href="https://www.bath.ac.uk/dep
   </table></div>
     
 
-<h1 class="w3-padding w3-left w3-button my-accordion">2018</h1>
+<h1 class="w3-left w3-button my-accordion">2018</h1>
   <div style="display:none"><table class="w3-table">
     <tr><th>11/2018</th><td> Our paper on <a href="http://aimsciences.org/article/doi/10.3934/ipi.2019015">Incorporating Structural Prior Information and Sparsity into EIT using Parallel Level Sets</a> got accepted for <a href="http://aimsciences.org/journal/1930-8337">Inverse Problems and Imaging</a>. This is joint work with <a href="http://venda.uef.fi/inverse/FrontPage/People/Ville%20Kolehmainen">Ville Kolehmainen</a> (Finland) and <a href="http://cmic.cs.ucl.ac.uk/staff/simon_arridge/">Simon Arridge</a> (UK).</td></tr>
 
@@ -228,7 +243,7 @@ I am a Leverhulme Early Career Fellow at the <a href="https://www.bath.ac.uk/dep
 </table></div>
     
     
-<h1 class="w3-padding w3-left w3-button my-accordion">2017</h1>
+<h1 class="w3-left w3-button my-accordion">2017</h1>
   <div style="display:none"><table class="w3-table">
 	<tr><th style="width:80px">12/2017</th><td> Our paper on <a href="http://ieeexplore.ieee.org/document/8239640/?arnumber=8239640&source=authoralert">Fast Quasi-Newton Algorithms for Penalized Reconstruction in Emission Tomography and Further Improvements via Preconditioning</a> has been accepted for publication in IEEE Transactions on Medical Imaging.</td></tr> 
 
@@ -250,7 +265,7 @@ I am a Leverhulme Early Career Fellow at the <a href="https://www.bath.ac.uk/dep
   </table></div>
 
 
-<h1 class="w3-padding w3-left w3-button my-accordion">2016</h1>
+<h1 class="w3-left w3-button my-accordion">2016</h1>
   <div style="display:none"><table class="w3-table">
 
 	<tr><th style="width:80px">12/2016</th><td> Our preprint on <a href="https://arxiv.org/abs/1612.02506">Gradient descent in a generalised Bregman distance framework</a> is available on <a href="https://arxiv.org/abs/1612.02506">arXiv</a>.</td></tr> 
@@ -263,22 +278,38 @@ I am a Leverhulme Early Career Fellow at the <a href="https://www.bath.ac.uk/dep
 
 	<tr><th>06/2016</th><td> On my way to Oxford where we organize a session at the <a href="https://www.maths.ox.ac.uk/events/conferences/essam-modelling-analysis-and-simulation-crime-and-image-processing">European Summer School in Modelling, Analysis and Simulation Crime and Image Processing</a> on Inverse Problems in Imaging.</td></tr> 
 
-  </table></div><div class="w3-container"></div>
+  </table></div>
 
-<h1 class="w3-padding">PostDocs</h1>
+</div>
+
+<div class="w3-container"></div>
+<div class="w3-rest"> </div>
+
+<hr>
+      
+<div class="my-anchor" id='Group'></div>    
+<h1 class="w3-xlarge w3-button my-accordion">BIG: Bath Imaging Group</h1>
+<div>
+    
+<h2 class="w3-padding">Lead</h2>
+    <ul style="margin-top:0pt">
+    <li><a href="https://mehrhardt.github.io/index.html">Matthias J. Ehrhardt</a></li>
+    </ul>   
+    
+<h2 class="w3-padding">PostDocs</h2>
     <ul style="margin-top:0pt">
     <li><a href="https://researchportal.bath.ac.uk/en/persons/jarrod-williams">Jarrod Williams</a> (2019-, machine learning, imaging; part of <a href="https://faraday.ac.uk/research/characterisation-liverpool/">Faraday grant: Imaging Dynamic Electrochemical Interfaces</a>)</li>
     <li><a href="https://clairedelplancke.github.io/">Claire Delplancke</a> (2020-, optimisation, PET imaging; part of <a href="https://petpp.github.io/">EPSRC grant: PET++</a>)</li>
     </ul>   
     
-<h1 class="w3-padding">PhD Students</h1>
+<h2 class="w3-padding">PhD Students</h2>
     <ul style="margin-top:0pt">
     <li><a href="https://www.maths.cam.ac.uk/postgrad/cca/people/fs436.html">Ferdia Sherry</a>, Cambridge (2016-, machine learning, imaging; co-supervisor with <a href="http://www.damtp.cam.ac.uk/user/cbs31/Home.html">Carola-Bibiane Schönlieb</a>)</li>
     <li><a href="http://www.bath.ac.uk/math-sci/postgraduate/samba/people-partners/students/index.html">Eric Baruch Gutiérrez Castillo</a>, Bath (2019-, optimisation; primary supervisor)</li>
     <li><a href="http://people.bath.ac.uk/magd21/">Margaret Duff</a>, Bath (2019-, machine learning, imaging; primary supervisor with <a href="http://cs.bath.ac.uk/~nc537/">Neill Campbell</a>)</li>
     </ul>
 
-<h1 class="w3-padding">Further Students</h1>
+<h2 class="w3-padding">Further Students</h2>
     <ul style="margin-top:0pt">
     <li>Samual Cortinhas, summer student (funded by LMS and IMI), Bath (06-07/2019, magnetic resonance fingerprinting)</li>
     <li>Varun Chhabra, master student, Bath (10/2018-04/2019, machine learning)</li>
@@ -288,24 +319,19 @@ I am a Leverhulme Early Career Fellow at the <a href="https://www.bath.ac.uk/dep
     <li>Emile Okada, summer student (funded by SUROP), Cambridge (06-08/2016, now PhD student at Oxford, public outreach: shadow tomography; with <a href="https://www.qmul.ac.uk/maths/profiles/benningmartin.html">Martin Benning</a>, <a href="https://crukcambridgecentre.org.uk/users/vc32469910151">Veronica Corona</a> and <a href="http://www.damtp.cam.ac.uk/user/cbs31/Home.html">Carola-Bibiane Schönlieb</a>)</li>
     </ul>
     
-<h1 class="w3-padding">Visitors</h1>
+<h2 class="w3-padding">Visitors</h2>
     <ul style="margin-top:0pt">
     <li><a href="https://www.dtu.dk/english/service/phonebook/person?id=136288&tab=2&qt=dtupublicationquery">Alessandro Perelli</a>, Technical University of Denmark, Denmark (09/2019)</li>
     <li><a href="https://konstmish.github.io/">Konstantin Mishchenko</a>, KAUST, Saudi Arabia (06/2019)</li>
     <li><a href="https://www.researchgate.net/profile/Evelyn_Cueva">Evelyn Cueva</a>, University of Chile, Santiago, Chile (11/2018-03/2019)</li>
     </ul>
     
-<div class="my-anchor" id='Contact'></div>
-<h1 class="w3-padding">Contact</h1>
-    <div class="w3-padding">
-    <a href="mailto:m.ehrhardt@bath.ac.uk">m.ehrhardt@bath.ac.uk</a><br>
-<p>Office: 6 West, 1.08<br>
-Tel: 0044 1225 38 6194<br>
-University of Bath<br>
-Bath BA2 7JU<br>
-United Kingdom
-</p>
-    </div>
+</div>
+    
+<div class="w3-container"></div>
+<div class="w3-rest"> </div> 
+    
+<hr>
     
 <h1 class="w3-padding">Useful Links</h1>
     <ul style="margin-top:0pt">
@@ -320,6 +346,9 @@ United Kingdom
     <li><a href="https://petpp.github.io/">PET++</a></li>
     <li><a href="http://stir.sourceforge.net">STIR</a></li>
     </ul>   
+    
+
+</div>
  
 <!-- Footer -->
 <div class="w3-padding-24 w3-light-grey">
