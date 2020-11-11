@@ -15,8 +15,12 @@ div.my-anchor {
     visibility: hidden;
 }
 
+.my-accordion {
+    transition: 0.6s ease;
+}
+    
 .my-accordion:hover {
-    background-color: #ccc; 
+    background-color: rgba(0,0,0,0.2);
 }
 	
 div.bottom-banner {
@@ -66,6 +70,75 @@ h2 {
     .smallscreen {display: block}
     .largescreen {display: none}
 }
+    
+    
+    
+    
+    
+.mySlides {display: none}
+    
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  border-radius: 3px 0 0 3px;
+}
+    
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.group_pic {
+  width: 100%;
+  max-width: 120pt;
+}
+    
+/* Caption text */
+.group_text {
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+    
+    
     
 </style>
 
@@ -124,7 +197,7 @@ United Kingdom
     </div>
     
 <div class="w3-col m2 l2 largescreen">
-<img src="images/Matthias_Ehrhardt_400x600.jpg" alt="Matthias J. Ehrhardt" style="width: 120pt">
+<img src="images/Matthias_Ehrhardt_600x400.jpg" alt="Matthias J. Ehrhardt" style="width: 120pt">
 </div>
     </div>
 
@@ -285,11 +358,18 @@ United Kingdom
 <div class="w3-container"></div>
 <div class="w3-rest"> </div>
 
+    
+    
+    
 <hr>
+    
+    
+    
       
 <div class="my-anchor" id='Group'></div>    
 <h1 class="w3-xlarge w3-button my-accordion">BIG: Bath Imaging Group</h1>
-<div>
+<div class="w3-row-padding">
+<div class="w3-col w3-justify m7 l7">    
     
 <h2 class="w3-padding">Lead</h2>
     <ul style="margin-top:0pt">
@@ -325,11 +405,147 @@ United Kingdom
     <li><a href="https://konstmish.github.io/">Konstantin Mishchenko</a>, KAUST, Saudi Arabia (06/2019)</li>
     <li><a href="https://www.researchgate.net/profile/Evelyn_Cueva">Evelyn Cueva</a>, University of Chile, Santiago, Chile (11/2018-03/2019)</li>
     </ul>
+    </div>
+    
+    
+    <div class="w3-col m5 l5 largescreen">
+    
+    
+    
+
+
+    
+    
+    
+    
+<h2 class="w3-padding">Current Team Members</h2>  
+        
+<div class="w3-row-padding">
+    <div class="w3-col m1 l1">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    </div>
+    <div class="w3-col m10 l10" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+    <div class="w3-col m1 l1">
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</div>
+        
+<br>
+        
+<div class="slideshow-container">
+
+<div class="mySlides">
+    <h2><a href="https://clairedelplancke.github.io">Claire Delplancke</a> (PostDoc since 01/2020)</h2>
+    <div class="w3-row-padding">
+    <div class="w3-col m4 l4">
+    <a href="https://clairedelplancke.github.io"><img class="group_pic" src="images/Claire_Delplancke_600x400.png"></a>
+    </div>
+    <div class="w3-col m8 l8 w3-justify group_text">
+        Before being a Research Associate at the University of Bath, Claire did a PhD on stochastic processes in Toulouse, France and a first post-doc in Santiago, Chile. She enjoys travels and good reads. She’s a member of the PET++ project and is interested in Stochastic Algorithms used in Inverse Problems from medical and seismic tomography.      
+    </div>
+    </div>
+</div>
+    
+<div class="mySlides">
+    <h2><a href="https://researchportal.bath.ac.uk/en/persons/jarrod-williams">Jarrod Williams</a> (PostDoc since 12/2019)</h2>
+    <div class="w3-row-padding">
+    <div class="w3-col m4 l4">
+    <a href="https://mehrhardt.github.io"><img class="group_pic" src="images/Jarrod_Williams_600x400.jpg"></a>
+    </div>
+    <div class="w3-col m8 l8 w3-justify group_text">
+        I am a Postdoctoral Research Associate on a Faraday Institution project, working on Image Processing/Inverse problems arising in battery characterisation. In practice, my research combines techniques from machine learning and continuous optimisation, from neural networks to proximal methods. I am also interested in applied differential geometry (my earlier studies were in mathematical physics), particularly its applications in Geometry Processing. I spend a lot of my spare time either exploring the great outdoors or playing the violin (badly!).      
+    </div>
+    </div>
+</div>
+    
+<div class="mySlides">
+    <h2><a href="https://people.bath.ac.uk/magd21">Margaret Duff</a> (PhD student since 06/2019)</h2>
+    <div class="w3-row-padding">
+    <div class="w3-col m4 l4">
+    <a href="https://people.bath.ac.uk/magd21"><img class="group_pic" src="images/Margaret_Duff_600x400.jpg"></a>
+    </div>
+    <div class="w3-col m8 l8 w3-justify group_text">
+        I am a PhD student as part of the Statistical Applied Mathematics CDT at the University of Bath. Before coming to Bath I completed a BA and MMath degrees at Emmanuel College, University of Cambridge. My research looks at how generative deep learning methods can be applied to inverse problems and imaging. It sits across mathematics and computer science and includes themes from numerical analysis and machine learning.
+    </div>
+    </div>
+</div>
+    
+<div class="mySlides">
+    <h2>Eric Baruch Gutierrez Castillo (PhD student since 02/2019)</h2>
+    <div class="w3-row-padding">
+    <div class="w3-col m4 l4">
+    <img class="group_pic" src="images/Eric_Baruch_Gutierrez_Castillo_600x400.jpg">
+    </div>
+    <div class="w3-col m8 l8 w3-justify group_text">
+        MSc Applied Mathematics, Delft University of Technology.
+Currently PhD student at University of Bath, Department of Mathematical Sciences.
+
+Within the branch of optimization and numerical analysis, research focuses on convergence of stochastic primal-dual algorithms for convex optimization, under the supervision of Dr. Matthias J. Ehrhardt (University of Bath). Applications reach several disciplines, with a special interest in Imaging and Machine Learning.    
+    </div>
+    </div>
+</div>
+        
+</div>
+
+    
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    
+    
+    
+    
+    </div>
+    
+    
     
 </div>
     
 <div class="w3-container"></div>
-<div class="w3-rest"> </div> 
+<div class="w3-rest"> </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 <hr>
     
