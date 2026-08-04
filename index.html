@@ -4,203 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-div.my-anchor {
-    display: block;
-    position: relative;
-    top: -120px;
-    visibility: hidden;
-}
-
-.my-accordion {
-    transition: 0.6s ease;
-}
-    
-.my-accordion:hover {
-    background-color: rgba(0,0,0,0.2);
-}
-	
-div.bottom-banner {
-	background-image: url(../images/contact_sprite_trans.png);
-	background-repeat: no-repeat; 
-	background-position: center;
-	height: 40px;
-	margin-left: auto; 
-	margin-right: auto;
-	opacity: .5;}
-
-div.bottom-banner:hover {
-	opacity: 1;}
-
-
-div.linkedin{background-position: -40px 0px; width: 40px}
-div.linkedin:hover{background-position: 0px 0px;}
-div.orcid{background-position: -40px -40px; width: 40px}
-div.orcid:hover{background-position: 0px -40px;}
-div.researchgate{background-position: -40px -80px; width: 40px}
-div.researchgate:hover{background-position: 0px -80px;}
-div.google{background-position: -80px -40px; width: 117px}
-div.google:hover{background-position: -80px 0px;}
-div.github{background-position: -40px -120px; width: 40px}
-div.github:hover{background-position: 0px -120px;}
-
-
-.w3-sidebar a {font-family: "Roboto", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-    
-h1 {
-    font-size: 18pt;
-    font-weight: bold;
-    margin: 0em;
-}
-    
-h2 {
-    font-size: 14pt;
-    font-weight: bold;
-    margin: 0em;
-}
-    
-.smallscreen {display: none}
-.largescreen {display: block}
-
-@media screen and (max-width: 700px) {
-    .smallscreen {display: block}
-    .largescreen {display: none}
-}
-    
-.mySlides {display: none}
-    
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  width: auto;
-  padding: 10px;
-  margin-top: -22px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  border-radius: 3px 0 0 3px;
-}
-    
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.2);
-}
-
-.group_pic {
-  width: 100%;
-  max-width: 120pt;
-}
-    
-/* Caption text */
-.group_text {
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next, .text {font-size: 11px}
-}
-    
-    
-    
-</style>
+<link rel="stylesheet" href="style.css">
 <body>
 
-<!-- Sidebar/menu -->
-<div class="w3-top w3-black" style="height: 90px">
-  <div class="w3-padding w3-bold w3-xlarge"><a href="index.html" style="text-decoration: none">Matthias J. Ehrhardt</a></div><br>
-  <div class="w3-left-align w3-display-bottomleft w3-bar largescreen">
-    <a href="index.html#aboutme" class="w3-bar-item w3-button w3-hover-white">About me</a>
-    <a href="index.html#group" class="w3-bar-item w3-button w3-hover-white">Group</a>
-    <a href="cv.html" class="w3-bar-item w3-button w3-hover-white">CV</a>
-    <a href="research.html" class="w3-bar-item w3-button w3-hover-white">Research</a>
-    <!--<a href="teaching.html" class="w3-bar-item w3-button w3-hover-white">Teaching</a>-->
-    <!--<a href="software.html" class="w3-bar-item w3-button w3-hover-white">Software</a>-->
-    <a href="index.html#contact" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+<nav class="site-nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">Matthias J. Ehrhardt</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#aboutme">About me</a>
+      <a href="#news">News</a>
+      <a href="#group">Group</a>
+      <a href="#publications">Publications</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#cv">CV</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menu" onclick="document.getElementById('nav-links').classList.toggle('open')">&#9776;</button>
   </div>
-    
-  <div class="w3-left-align w3-display-bottomleft w3-bar smallscreen">
-    <a href="index.html#aboutme" class="w3-bar-item w3-button w3-hover-white">About me</a>
-    <a href="index.html#group" class="w3-bar-item w3-button w3-hover-white">Group</a>
-    <a href="research.html" class="w3-bar-item w3-button w3-hover-white">Research</a>
-    <a href="index.html#contact" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-  </div>
-</div>
+</nav>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main">
-<div style="margin-top:90px"></div>
-<div class="w3-padding">
-<div class="w3-row-padding">
-<div class="w3-col w3-justify m8 l8">
-<div class="my-anchor" id="aboutme"></div>
+
+<div class="intro-grid">
+
+  <div class="intro-bio">
+    <div class="my-anchor" id="aboutme"></div>
     <h1>About me</h1>
+    <p>I am a Professor at the <a href="https://www.bath.ac.uk/departments/department-of-mathematical-sciences/">Department of Mathematical Sciences</a>, <a href="https://www.bath.ac.uk">University of Bath</a>. My research is primarily focused on the intersection of optimization, inverse imaging problems, and machine learning. In particular,
+    <ul>
+    <li>Optimization: Specialising in stochastic optimization for large-scale inverse problems.</li>
+    <li>Machine Learning: Integrating machine learning techniques into variational regularization for imaging.</li>
+    <li>Inverse Problems: Solving mathematical models where the goal is to determine the internal properties of a system from observed data.</li>
+    <li>Medical Imaging: Developing algorithms for faster and more accurate image reconstruction, such as in PET scans.</li>
+    </ul></p>
+    <p>I am the deputy director of the <a href="https://www.bath.ac.uk/departments/department-of-mathematical-sciences/">EPSRC Programme Grant on the Mathematics for Deep Learning</a>, co-investigator of the <a href="https://samba.ac.uk/">EPSRC Centre for Doctoral Training in Statistical Applied Mathematics based at the University of Bath (SAMBa)</a> and heading the <a href="#group">Bath Imaging Group</a>. I am also a fellow of the <a href="https://imibath.ac.uk/">Institute for Mathematical Innovation</a>. See <a href="#cv">CV</a> for more details.</p>
+  </div>
 
-<p>I am a Professor at the <a href="https://www.bath.ac.uk/departments/department-of-mathematical-sciences/">Department of Mathematical Sciences</a>, <a href="https://www.bath.ac.uk">University of Bath</a>. My research is primarily focused on the intersection of optimization, inverse imaging problems, and machine learning. In particular,
-<ul>
-<li>Optimization: Specialising in stochastic optimization for large-scale inverse problems.</li>
-<li>Machine Learning: Integrating machine learning techniques into variational regularization for imaging.</li>
-<li>Inverse Problems: Solving mathematical models where the goal is to determine the internal properties of a system from observed data.</li>
-<li>Medical Imaging: Developing algorithms for faster and more accurate image reconstruction, such as in PET scans.</li>
-</ul></p>
+  <div class="intro-sidebar">
+    <img src="images/Matthias_Ehrhardt_600x400.jpg" alt="Matthias J. Ehrhardt" class="intro-photo">
+    <div class="my-anchor" id="contact"></div>
+    <div class="intro-contact">
+      <h1>Contact</h1>
+      <a href="mailto:m.ehrhardt@bath.ac.uk">m.ehrhardt@bath.ac.uk</a>
+      <p>Office: 6 West, 1.08<br>
+      University of Bath<br>
+      Bath BA2 7JU<br>
+      United Kingdom</p>
+    </div>
+  </div>
 
-<p>I am the deputy director of the  <a href="https://www.bath.ac.uk/departments/department-of-mathematical-sciences/">EPSRC Programme Grant on the Mathematics for Deep Learning</a>, co-investigator of the <a href="https://samba.ac.uk/">EPSRC Centre for Doctoral Training in Statistical Applied Mathematics based at the University of Bath (SAMBa)</a> and heading the <a href="index.html#group">Bath Imaging Group</a>. I am also a fellow of the <a href="https://imibath.ac.uk/">Institute for Mathematical Innovation</a>. See <a href="cv.html">CV</a> for more details.</p>
 </div>
 
-<div class="w3-col m2 l2">
-<div class="my-anchor" id="contact"></div>
-<h1>Contact</h1>
-    <a href="mailto:m.ehrhardt@bath.ac.uk">m.ehrhardt@bath.ac.uk</a><br>
-<p>Office: 6 West, 1.08<br>
-University of Bath<br>
-Bath BA2 7JU<br>
-United Kingdom
-</p>
-</div>
-    
-<div class="w3-col m2 l2 largescreen">
-<img src="images/Matthias_Ehrhardt_600x400.jpg" alt="Matthias J. Ehrhardt" style="width: 120pt">
-</div>
-</div>
 <hr>
     
     
 <div class="my-anchor" id="news"></div>    
-<h1 class="w3-xlarge w3-left w3-button my-accordion">News</h1>
-  <div><table class="w3-table">
+<h1>News</h1>
+<table class="w3-table">
 
   <tr><th>06/2026</th><td>Paper published: Our paper on <a href="https://doi.org/10.1137/24M1716884">Efficient Gradient-Based Methods for Bilevel Learning via Recycling Krylov Subspaces</a> has been published in SIAM Scientific Computing. This is joint work with <a href="https://s-j-scott.github.io/">Seb Scott (Wuerzburg, Germany)</a> and <a href="https://sites.google.com/view/silviaspersonalwebpage/silvias-homepage">Silvia Gazzola (Pisa, Italy)</a>.</td></tr>
 
@@ -255,13 +119,11 @@ United Kingdom
   <tr><th>01/2025</th><td>Our paper on <a href="https://link.springer.com/article/10.1007/s10851-025-01231-3">Randomized Primal-Dual Algorithm with Arbitrary Sampling: Convergence Theory and Applications to Parallel MRI</a> got published in the Journal of Mathematical Imaging and Vision. This is joint work with <a href="https://www.linkedin.com/in/eric-baruch-gutierrez-castillo-570b30124/?originalSubdomain=mx">Eric B. Gutierrez (Bath, UK)</a> and <a href="https://clairedelplancke.github.io/">Claire Delplancke (Bath, UK)</a>.</td></tr>
 
   <tr><th>01/2025</th><td>Congratulations to <a href="https://s-j-scott.github.io/">Seb Scott</a> for completing his PhD!</td></tr>
-  </table></div>
+  </table>
 
 
-<h1 class="w3-padding w3-left">News archive:</h1>
+<h1 class="w3-xlarge w3-button my-accordion section-title">News archive: 2016-24</h1>
 
-
-<h1 class="w3-left w3-button my-accordion">2016-24</h1>
   <div style="display:none"><table class="w3-table">
 
   <tr><th>12/2024</th><td>New preprint: <a href="https://arxiv.org/abs/2412.12049">Bilevel Learning with Inexact Stochastic Gradients</a>. Joint work with <a href="https://mohammadsadeghsalehi.github.io">Mohammad Sadegh Salehi (Bath, UK)</a>, <a href="https://sites.google.com/view/subhadip-mukherjee/home">Subhadip Mukherjee (Kharagpur, India)</a> and <a href="https://lindonroberts.github.io">Lindon Roberts (Sydney, Australia)</a>.</td></tr>
@@ -517,26 +379,23 @@ United Kingdom
     
     
 <hr>
-    
-    
-    
       
-<div class="my-anchor" id="group"></div>    
-<h1 class="w3-xlarge w3-button my-accordion">BIG: Bath Imaging Group</h1>
-<div class="w3-row-padding">
-<div class="w3-col w3-justify m7 l7">
+<div class="my-anchor" id="group"></div>
+<h1>BIG: Bath Imaging Group</h1>
+<div class="intro-grid group-section">
+<div class="intro-bio">
     
-<h2 class="w3-padding">Lead</h2>
-    <ul style="margin-top:0pt">
+<h2>Lead</h2>
+    <ul class="compact-list">
     <li><a href="https://mehrhardt.github.io/index.html">Matthias J. Ehrhardt</a></li>
     </ul>   
     
-    <!--<h2 class="w3-padding">PostDocs</h2>
-    <ul style="margin-top:0pt">
+    <!--<h2 class="group-h2">PostDocs</h2>
+    <ul class="compact-list">
     </ul>-->
     
-<h2 class="w3-padding">PhD Students</h2>
-    <ul style="margin-top:0pt">
+<h2>PhD Students</h2>
+    <ul class="compact-list">
     <li><a href="https://samba.ac.uk/student/anastasia-doan/">Anastasia Doan</a> (2025-, AI for image reconstruction algorithms; lead supervisor with <a href="https://www.numerical.rl.ac.uk/people/margaret-duff/">Margaret Duff</a>)</li>
     <li><a href="https://samba.ac.uk/student/clara-hawkins/">Clara Hawkins</a> (2024-, multi-modality imaging; lead supervisor with <a href="https://scholar.google.co.uk/citations?user=lmN-B-IAAAAJ&hl=en">Paul Quinn</a>)</li>
     <li><a href="https://samba.ac.uk/student/amin-sabir/">Amin Sabir</a> (2024-, machine learning, inverse problems; second supervisor with <a href="https://yury-korolev.gitlab.io/">Yury Korolev</a>)</li>
@@ -559,9 +418,16 @@ United Kingdom
     <li><a href="https://konstmish.github.io/">Konstantin Mishchenko</a>, KAUST, Saudi Arabia (06/2019)</li>
     <li><a href="https://www.researchgate.net/profile/Evelyn_Cueva">Evelyn Cueva</a>, University of Chile, Santiago, Chile (11/2018-03/2019)</li>
     </ul>-->
+
+    </div><!-- /.intro-bio -->
+  <div class="intro-sidebar">
+    <img src="images/2025b_group.png" alt="BIG: Bath Imaging Group" class="intro-photo">
+  </div>
+</div><!-- /.intro-grid -->
     
-<h2 class="w3-padding">Former members</h2>
-    <ul style="margin-top:0pt">
+
+<h2>Former members</h2>
+    <ul class="compact-list">
     <li><a href="https://maths4dl.com/team-member/hok-shing-wong/">Hok Shing Wong</a> (2022-2026, machine learning; part of <a href="https://maths4dl.com/">EPSRC grant: M4DL</a>; then PDRA at LMU Munich)</li>
     <li><a href="https://parratia.netlify.app/">Pablo Arratia</a> (2022-2025, neural fields for dynamic inverse problems; lead supervisor with <a href="https://people.bath.ac.uk/lmk54/">Lisa Kreusser</a>; then PDRA at Heriot-Watt)</li>
     <li><a href="https://www.tue.nl/en/research/researchers/kerstin-lux-gottschalk">Kerstin Lux-Gottschalk</a>, TU Eindhoven, Netherlands (visitor, 07/2025-08/2025)</li>
@@ -590,124 +456,96 @@ United Kingdom
 
 <p>Are you interested in working with me on inverse problems, machine learning, mathematical imaging or optimization? I am happy to support fellowship applications including but not limited to the Marie-Curie Fellowship, EPSRC Doctoral Prize/Postdoctoral Fellowship, LMS Early Career Fellowship, or Leverhulme Early Career Fellowship, see <a href="https://www.bath.ac.uk/guides/joining-mathematical-sciences-as-an-independent-research-fellow/">link</a> for more details. I am also interested in supervising PhD students on these topics. Please check out <a href="https://samba.ac.uk">SAMBa</a> if you are interested.</p>
 
-    </div>
-    
 
-
-
-<div class="w3-col m5 l5 largescreen">    
-
-<img src="images/2025b_group.png" alt="BIG" style="width: 240pt">
-
-
-<!--<h2 class="w3-padding">Current Team Members</h2>  
-        
-<div class="w3-padding w3-row-padding">
-    <div class="w3-col m1 l1">
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    </div>
-    <div class="w3-col m10 l10" style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-    <span class="dot" onclick="currentSlide(4)"></span> 
-    </div>
-    <div class="w3-col m1 l1">
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-</div>
-        
-<div class="w3-padding slideshow-container">
-
-<div class="mySlides">
-    <h2><a href="https://clairedelplancke.github.io">Claire Delplancke</a> (PostDoc since 01/2020)</h2>
-    <div class="w3-row-padding">
-    <div class="w3-col m4 l4">
-    <a href="https://clairedelplancke.github.io"><img class="group_pic" src="images/Claire_Delplancke_600x400.png"></a>
-    </div>
-    <div class="w3-col m8 l8 w3-justify group_text">
-        Before being a Research Associate at the University of Bath, Claire did a PhD on stochastic processes in Toulouse, France and a first post-doc in Santiago, Chile. She enjoys travels and good reads. She’s a member of the PET++ project and is interested in Stochastic Algorithms used in Inverse Problems from medical and seismic tomography.      
-    </div>
-    </div>
-</div>
-    
-<div class="mySlides">
-    <h2>Eric Baruch Gutierrez Castillo (PhD student since 02/2019)</h2>
-    <div class="w3-row-padding">
-    <div class="w3-col m4 l4">
-    <img class="group_pic" src="images/Eric_Baruch_Gutierrez_Castillo_600x400.jpg">
-    </div>
-    <div class="w3-col m8 l8 w3-justify group_text">My name is Eric Baruch Gutierrez Castillo, MSc Applied Mathematics from Delft University of Technology, The Netherlands. Currently PhD student at University of Bath, Department of Mathematical Sciences, under the supervision of Dr. Matthias J. Ehrhardt. As part of the numerical analysis group, my research focuses on convergence of stochastic primal-dual algorithms for convex optimization, where I look into both convergence analysis and practical applications. Applications reach several disciplines, with a special interest in Imaging and Machine Learning.</div>
-    </div>
-</div>
-    
-<div class="mySlides">
-    <h2><a href="https://people.bath.ac.uk/magd21">Margaret Duff</a> (PhD student since 06/2019)</h2>
-    <div class="w3-row-padding">
-    <div class="w3-col m4 l4">
-    <a href="https://people.bath.ac.uk/magd21"><img class="group_pic" src="images/Margaret_Duff_600x400.jpg"></a>
-    </div>
-    <div class="w3-col m8 l8 w3-justify group_text">I am a PhD student as part of the Statistical Applied Mathematics CDT at the University of Bath. Before coming to Bath I completed a BA and MMath degrees at Emmanuel College, University of Cambridge. My research looks at how generative deep learning methods can be applied to inverse problems and imaging. It sits across mathematics and computer science and includes themes from numerical analysis and machine learning.</div>
-    </div>
-</div>
-
-<div class="mySlides">
-    <h2><a href="https://people.bath.ac.uk/ss2767">Seb Scott</a> (PhD student since 06/2021)</h2>
-    <div class="w3-row-padding">
-    <div class="w3-col m4 l4">
-        <a href="https://people.bath.ac.uk/ss2767"><img class="group_pic" src="images/Seb_Scott_600x400.jpg"></a>
-    </div>
-    <div class="w3-col m8 l8 w3-justify group_text">Seb is a current PhD student as part of the Statistical Applied Mathematics CDT at the University of Bath, having completed an MMath degree at the same institution in 2020. His masters project involved efficient solvers of regularised ill-posed linear inverse problems. Now, his research explores ways to utilise machine learning within the regularisation procedure to yield improved reconstructions.</div>
-    </div>
-</div>
-        
-</div>
-
-    
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
--->
-</div>
-    </div>
-    
-<div class="w3-container"></div>
-<div class="w3-rest"> </div>
-    
-
-    
 <hr>
+
+
+<div class="my-anchor" id="publications"></div>
+
+<h1>Publications <small><small>(<span>&#8224;</span> denotes alphabetical order of authors)</small></small></h1>
+
+<div id="publications-generated" data-include="data/generated/publications.html">
+  <p>Loading publications…</p>
+</div>
+
+<!-- CONFERENCES -->
+<div class="my-anchor" id="presentations"></div>
+<h1>Presentations <small><small>(* denotes invited presentations)</small></small></h1>
+
+<div id="presentations-generated" data-include="data/generated/presentations.html">
+  <p>Loading presentations…</p>
+</div>
+
+<hr>
+
+<div class="my-anchor" id="cv"></div>
     
+<h1>Curriculum Vitae</h1>
+        
+<h2>Employment</h2>
+<table class="w3-table">
+    <tr><th style="width:150px">since 2026</th><td><b>Professor</b>, University of Bath, UK</td></tr> 
+    <tr><th>2021 - 2026</th><td><b>Reader / Associate Professor</b>, University of Bath, UK</td></tr> 
+    <tr><th>2020 - 2023</th><td><b>Leverhulme Early Career Fellow</b>, University of Bath, UK</td></tr> 
+	<tr><th>2018 - 2021</th><td><b>Prize Fellow</b>, University of Bath, UK</td></tr> 
+	<tr><th>2016 - 2018</th><td><b>Postdoctoral Research Associate</b>, University of Cambridge, UK </td></tr> 
+	<tr><th>2015</th><td><b>Postdoctoral Research Associate</b>, University College London, UK </td></tr> 
+</table>
+
+<h2>Education</h2>
+<table class="w3-table">
+	<tr><th style="width:150px">2012 - 2015</th><td> <b>PhD in Medical Imaging</b>, University College London, UK<br> 
+Thesis: Joint Reconstruction for Multi-Modality Imaging with Common Structure [<a href="http://discovery.ucl.ac.uk/1469770/1/2015-07-07_Ehrhardt_PhD_final.pdf" target="_blank">pdf (49 MB)</a>]<br>	
+Advisors: <a href="http://www0.cs.ucl.ac.uk/staff/s.arridge/">Prof Simon Arridge</a>, <a href="https://iris.ucl.ac.uk/iris/browse/profile?upi=KTHIE60">Dr Kris Thielemans</a></td></tr> 
+	<tr><th>2006 - 2012</th><td> <b>MSc in Industrial Mathematics</b>, University of Bremen, Germany<br>
+Thesis: Sparsity in Geosciences - Sparse Decomposition for Analysis of Sea Floor Pressure Data [<a href="data/Ehrhardt_Sparsity_in_Geosciences_2011-11-21.pdf" target="_blank">pdf (5 MB)</a>] </td></tr> 
+</table>
+
+<br>
+A full CV can be found <a href="data/202608_cv.pdf" target="_blank">here</a> (&lt;1 MB) (last updated: 08/2026) 
+
+
+<div style="margin-top:10px"></div>
+
+<hr>
+
+<div class="my-anchor" id="teaching"></div>
+<h1>Teaching</h1>
+
+<h2>University of Bath, UK</h2>
+<table class="w3-table">
+    <tr><th style="width:80px">2025/26</th><td> Numerical Linear Algebra, Lecturer [<a href="https://www.bath.ac.uk/catalogues/2025-2026/ma/MA32065.html">course description</a>]</td></tr>
+    <tr><th>2024/25</th><td> Numerical Linear Algebra, Lecturer [<a href="https://www.bath.ac.uk/catalogues/2024-2025/ma/MA30051.html">course description</a>]</td></tr>
+    <tr><th>2023/24</th><td> Numerical Linear Algebra, Lecturer [<a href="https://www.bath.ac.uk/catalogues/2023-2024/ma/MA30051.html">course description</a>]</td></tr>
+    <tr><th>2022/23</th><td> Numerical Linear Algebra, Lecturer [<a href="https://www.bath.ac.uk/catalogues/2022-2023/ma/MA30051.html">course description</a>]</td></tr>
+    <tr><th>2020/21</th><td> Analysis 2A, Tutor</td></tr>
+</table>
+
+<h2>University of Cambridge, UK</h2>
+<table class="w3-table">
+    <tr><th style="width:80px">2017/18</th><td> <a href="http://www.damtp.cam.ac.uk/research/cia/teaching/201718lentinvprob.html">Inverse Problems</a> (Mathematical Tripos Part III), Lecturer [<a href="data/201706_course_invprob.pdf">course description</a>][<a href="data/201803_lecture_notes_invprob.pdf">lecture notes</a>]</td></tr> 
+    <tr><th>2016/17</th><td> <a href="http://www.damtp.cam.ac.uk/research/cia/teaching/2016inverseproblems.html">Inverse Problems in Imaging</a> (Mathematical Tripos Part III), Lecturer [<a href="data/201611_lecture_notes_invprob.pdf">lecture notes</a>]</td></tr>
+	<tr><th>2015/16</th><td> <a href="https://www.maths.ox.ac.uk/events/conferences/essam-modelling-analysis-and-simulation-crime-and-image-processing">European Summer School in Modelling, Analysis and Simulation Crime and Image Processing</a>, Group Supervisor [<a href="data/2016_Oxford_MRI_code_and_data.zip">download MATLAB demo (20 MB)</a>]</td></tr>
+</table>
+                
+<h2>University College London, UK</h2>
+<table class="w3-table">
+	<tr><th style="width:80px">2015/16</th><td> UCL Medical Image Computing Summer School, Group Supervisor</td></tr> 
+	<tr><th>2014/15</th><td> Inverse Problems in Imaging, Teaching Assistant</td></tr> 
+	<tr><th>2013/14</th><td> Introduction to Matlab, Teaching Assistant</td></tr> 
+	<tr><th></th><td> Mathematics for Statisticians, Teaching Assistant</td></tr> 
+	<tr><th></th><td> Writing Scientific Papers with LaTeX, Teaching Assistant</td></tr> 
+	<tr><th></th><td> Inverse Problems in Imaging, Teaching Assistant</td></tr> 
+</table>
+
+<h2>University of Bremen, Germany</h2>
+<table class="w3-table">
+	<tr><th style="width:80px">2010/11</th><td> Functional Analysis, Teaching Assistant</td></tr> 
+</table>
+
     
-    
-<h1 class="w3-padding">Useful Links</h1>
-    <ul style="margin-top:0pt">
+<h1>Useful Links</h1>
+    <ul class="compact-list">
     <li><a href="https://bath-siam-ima.github.io">Bath SIAM-IMA Student Chapter</a></li>
     <li><a href="https://bath-numerical-analysis.github.io/">Bath Numerical Analysis</a></li>
     <li><a href="https://www.ccppetmr.ac.uk/">CCP SyneRBI: SIRF</a></li>
@@ -721,28 +559,43 @@ function showSlides(n) {
     </ul>   
     
 
+
 </div>
  
-<!-- Footer -->
-<div class="w3-padding-24 w3-light-grey">
-    <div class="w3-content w3-cell-row">
-		<div class="w3-cell" style="width: 20%"><a href="http://uk.linkedin.com/pub/matthias-j-ehrhardt/89/193/b61/"><div class="bottom-banner linkedin"> </div></a></div>
-
-		<div class="w3-cell" style="width: 20%"><a href="https://www.researchgate.net/profile/Matthias_Ehrhardt2?ev=hdr_xprf"><div class="bottom-banner researchgate"></div></a></div>
-
-		<div class="w3-cell" style="width: 20%"><a href="http://orcid.org/0000-0001-8523-353X"><div class="bottom-banner orcid"></div></a></div>
-
-		<div class="w3-cell" style="width: 20%"><a href="https://github.com/mehrhardt"><div class="bottom-banner github"></div></a></div>
-
-		<div class="w3-cell" style="width: 20%"><a href="https://scholar.google.co.uk/citations?user=dkbrSccAAAAJ&hl=en"><div class="bottom-banner google"> </div></a></div>
-    </div></div>
-
-<div class="w3-black w3-padding-24 w3-block w3-center">&copy; 2014-2026 Matthias J. Ehrhardt - m.ehrhardt@bath.ac.uk - last updated: 07/2026</div>
-
-<!-- End page content -->
-</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-social">
+      <a href="http://uk.linkedin.com/pub/matthias-j-ehrhardt/89/193/b61/" title="LinkedIn"><img src="images/linkedin_40x40_black.png" alt="LinkedIn"></a>
+      <a href="https://www.researchgate.net/profile/Matthias_Ehrhardt2?ev=hdr_xprf" title="ResearchGate"><img src="images/researchgate_40x40_black.png" alt="ResearchGate"></a>
+      <a href="http://orcid.org/0000-0001-8523-353X" title="ORCID"><img src="images/orcid_40x40_black.png" alt="ORCID"></a>
+      <a href="https://github.com/mehrhardt" title="GitHub"><img src="images/github_40x40_black.png" alt="GitHub"></a>
+      <a href="https://scholar.google.co.uk/citations?user=dkbrSccAAAAJ&hl=en" title="Google Scholar"><img src="images/google_40x117_black.png" style="width:auto;height:24px;" alt="Google Scholar"></a>
+    </div>
+    <div class="footer-copy">&copy; 2014&ndash;2026 Matthias J. Ehrhardt &mdash; <a href="mailto:m.ehrhardt@bath.ac.uk">m.ehrhardt@bath.ac.uk</a></div>
+  </div>
+</footer>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[data-include]").forEach(function (container) {
+        var includePath = container.getAttribute("data-include");
+        fetch(includePath, { cache: "no-cache" })
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Could not load include: " + includePath);
+                }
+                return response.text();
+            })
+            .then(function (html) {
+                container.innerHTML = html;
+            })
+            .catch(function (error) {
+                container.innerHTML = "<p>Could not load this section. Please refresh the page.</p>";
+                console.error(error);
+            });
+    });
+});
+
 var acc = document.getElementsByClassName("my-accordion");
 var i;
 
@@ -750,6 +603,9 @@ for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
+        if (!panel || panel.classList.contains("site-footer")) {
+            return;
+        }
         if (panel.style.display !== "none") {
             panel.style.display = "none";
         } else {
